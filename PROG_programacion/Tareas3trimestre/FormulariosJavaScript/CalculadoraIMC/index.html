@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora IMC</title>
+    <style>
+      /* Estilos para el formulario */
+      form {
+        font-size: 20px;
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      /* Margen inferior para cada div que agrupa un campo del formulario */
+      div {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body> 
+    <form id="IMC">
+      <!-- Contenedor para la etiqueta peso -->
+      <div>
+        <label for="peso">Peso:</label>
+        <input type="text" id="peso" name="peso" />
+      </div>
+      <!-- Contenedor para la etiqueta altura -->
+      <div>
+        <label for="altura">Altura (metros):</label>
+        <input type="text" id="altura" name="altura" />
+      </div>
+      <!-- Botón para enviar -->
+      <button type="submit">Calcular IMC</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("IMC")
+        .addEventListener("submit", function (event) {
+          // Recogo el valor introducido
+          let peso = document.getElementById("peso").value;
+          let altura = document.getElementById("altura").value;
+
+          let IMC = peso / (altura * altura);
+
+          if (IMC < 18.5) {
+            alert(IMC + " \nPeso Bajo");
+          } else if (IMC < 25) {
+            alert(IMC + " \nPeso Normal");
+          } else if (IMC < 30) {
+            alert(IMC + " \nSobrepeso");
+          } else if (IMC > 30) {
+            alert(IMC + " \nObeso");
+          }
+        });
+    </script>
+  </body>
+</html>

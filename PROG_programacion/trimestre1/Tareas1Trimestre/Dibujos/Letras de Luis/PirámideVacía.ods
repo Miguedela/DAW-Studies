@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class DibujarPiramideVacia {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa la altura de la pirámide: ");
+        int altura = scanner.nextInt();
+
+        if (altura < 2) {
+            System.out.println("La altura debe ser un número mayor o igual a 2.");
+        } else {
+            dibujarPiramideVacia(altura);
+        }
+    }
+
+    public static void dibujarPiramideVacia(int altura) {
+        for (int i = 1; i <= altura; i++) {
+            // Imprimir espacios en blanco
+            for (int j = 1; j <= altura - i; j++) {
+                System.out.print(" ");
+            }
+
+            // Imprimir asterisco en la primera y última fila
+            if (i == 1 || i == altura) {
+                for (int k = 1; k <= 2 * i - 1; k++) {
+                    System.out.print("*");
+                }
+            } else {
+                // Imprimir asterisco solo en el borde izquierdo y derecho
+                System.out.print("*");
+                for (int k = 1; k <= 2 * i - 3; k++) {
+                    System.out.print(" ");
+                }
+                System.out.print("*");
+            }
+
+            System.out.println(); // Nueva línea
+        }
+    }
+}

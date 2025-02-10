@@ -1,0 +1,39 @@
+<!--
+Se tiene una tabla y dos controles de tipo button. Permitir inicializar con 5 la propiedad border
+de la tabla al presionar uno de los botones y borrar la propiedad border al presionar el otro botón.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ponerBorder() {
+            let tabla = document.querySelector('.tabla')
+            tabla.setAttribute('border', '5')
+        }
+        function quitarAtributo() {
+            let tabla = document.querySelector('.tabla')
+            tabla.setAttribute('border', '0')
+        }
+    </script>
+</head>
+
+<body>
+    <table class="tabla">
+        <tr>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>21</td>
+            <td>22</td>
+        </tr>
+    </table>
+    <input type="button" value="Poner borde" onClick="ponerBorder()"><br>
+    <input type="button" value="Quitar borde" onClick="quitarAtributo()">
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!--
+Crea un formulario que tenga dos botones con id boton1 y boton2 respectivamente.
+Crea también dos div con id div1 div2.
+
+Haz que los siguientes eventos tengan un único manejador de eventos llamado manejadorEventos:
+Clic sobre boton1
+Clic sobre boton2
+Ratón entra dentro de div1
+Ratón entra dentro de div2
+
+En dicho manejador de eventos escribe el código necesario para que en la consola se
+muestre el objeto que ha generado el evento así como el tipo de evento (click o mouseenter).
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: solid 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Manejador de eventos compartido (Ver consola de depuración)</h1>
+
+    <button id="boton1">Boton 1</button>
+    <button id="boton2">Boton 2</button>
+
+    <p>Div 1</p>
+    <div id="div1">
+        <p>Hola</p>
+        <p>Hola</p>
+    </div>
+    <p>Div 2</p>
+    <div id="div2">
+        <p>Hola</p>
+        <p>Hola</p>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+        addEventListener('load', inicio);
+
+        function inicio() {
+            const boton1 = document.getElementById('boton1');
+            boton1.addEventListener('click', manejadorCompartido);
+            const boton2 = document.getElementById('boton2');
+            boton2.addEventListener('click', manejadorCompartido);
+            const div1 = document.getElementById('div1');
+            div1.addEventListener('mouseenter', manejadorCompartido)
+            const div2 = document.getElementById('div2');
+            div2.addEventListener('mouseenter', manejadorCompartido)
+        }
+
+        function manejadorCompartido(evt) {
+            console.log(evt.target);
+            console.log(evt.type);
+        }
+    </script>
+</body>
+
+</html>

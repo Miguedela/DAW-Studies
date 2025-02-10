@@ -1,0 +1,19 @@
+/* El título del link a Google utiliza un tamaño de fuente de 15px; el borde es de 1px, punteado y color orangered. */
+a[href*="google"] {
+  font-size: 15px;
+  border: dotted 1px orangered;
+}
+
+/* El atributo alt de la imagen random image tiene un tamaño de fuente de 10px, italic y borde de 1px, línea discontinua
+(dashed) y color darkred. */
+img[alt*="random image"] {
+  font-size: 10px;
+  font-style: italic;
+  border: dashed 1px darkred;
+}
+
+/* El atributo alt de imagen "logo", tiene un tamaño de fuente de 11px. y borde de 1px, punteado y color verde. */
+img[alt*="logo"] {
+  font-size: 11px;
+  border: dashed 1px green;
+}

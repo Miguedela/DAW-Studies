@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JavaScript</title>
+  <style>
+    body {
+      margin: 20px;
+      /* Espacio externo */
+
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #212529;
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Plantilla JavaScript v2</h1>
+  <h2>Pulsa F12 para ver la consola de depuración</h2>
+
+  <!-- SCRIPT -->
+  <script>
+    function distance(lat1, lat2, lon1, lon2) {
+      // The math module contains a function
+      // named toRadians which converts from
+      // degrees to radians.
+
+      lon1 = (lon1 * Math.PI) / 180;
+      lon2 = (lon2 * Math.PI) / 180;
+      lat1 = (lat1 * Math.PI) / 180;
+      lat2 = (lat2 * Math.PI) / 180;
+
+      // Haversine formula
+      let dlon = lon2 - lon1;
+      let dlat = lat2 - lat1;
+      let a = Math.pow(Math.sin(dlat / 2), 2) + Math.cos(lat1) * Math.cos(lat2) * Math.pow(Math.sin(dlon / 2), 2);
+
+      let c = 2 * Math.asin(Math.sqrt(a));
+
+      // Radius of earth in kilometers. Use 3956
+      // for miles
+      // let r = 3956;
+      let r = 6371;
+
+      // calculate the result
+      return c * r;
+    }
+
+    function redondearDecimales(numero, decimales) {
+      return Math.round(numero * Math.pow(10, decimales)) / Math.pow(10, decimales);
+    }
+
+    let latitud1 = 43.3914105;
+    let latitud2 = 42.5735672;
+
+    let longitud1 = -5.9591776;
+    let longitud2 = -5.5671588;
+
+    console.log(redondearDecimales(distance(latitud1, latitud2, longitud1, longitud2), 1));
+  </script>
+</body>
+
+</html>

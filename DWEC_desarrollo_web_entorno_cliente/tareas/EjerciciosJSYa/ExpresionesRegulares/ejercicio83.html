@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Presione F12 para poder visualizar la consola</h1>
+
+    <!-- SCRIPTS -->
+    <script>
+        let expresion = /^((Lunes|Martes|Miercoles|Jueves|Viernes|Sabado|Domingo)\s(\d{1,2}))$/;
+
+        // Comprobacion de la primera expresion regular
+        console.log(expresion.test('Domingo 21'));
+        console.log(expresion.test('DomingoLunes 21'));
+    </script>
+</body>
+
+</html>

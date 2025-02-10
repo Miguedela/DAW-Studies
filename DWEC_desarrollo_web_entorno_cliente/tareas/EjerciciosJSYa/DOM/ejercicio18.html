@@ -1,0 +1,32 @@
+<!--
+Disponer dos enlaces a distintos sitios. Recuperar la propiedad href del primer
+enlace y fijar el segundo enlace con dicho valor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function copiarEnlace() {
+            let puntero1 = document.querySelector('a:nth-of-type(1)')
+            let puntero2 = document.querySelector('a:nth-of-type(2)')
+
+            let href1 = puntero1.getAttribute('href');
+
+            puntero2.setAttribute('href', href1)
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <a href="http://www.google.com.ar">Google.</a><br>
+        <a href="http://www.msn.com">MSN.</a><br>
+        <input type="button" value="Copiar enlace1 en enlace2" onClick="copiarEnlace()">
+    </div>
+</body>
+
+</html>

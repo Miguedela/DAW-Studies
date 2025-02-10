@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</head>
+
+<body>
+    <input type="text" class="text1" name="text1" size="30">
+    <br>
+    <input type="text" class="text2" name="text2" size="30">
+
+    <!-- SCRIPTS -->
+    <script>
+        addEventListener('load', inicio);
+
+        function inicio() {
+            document.querySelector('.text1').addEventListener('focus', tomarfoco1);
+            document.querySelector('.text2').addEventListener('focus', tomarfoco2);
+            document.querySelector('.text1').addEventListener('blur', perderfoco1);
+            document.querySelector('.text2').addEventListener('blur', perderfoco2);
+        }
+
+        function tomarfoco1() {
+            document.querySelector('.text1').style.color = 'darkgray';
+        }
+
+        function tomarfoco2() {
+            document.querySelector('.text2').style.color = 'darkgray';
+        }
+
+        function perderfoco1() {
+            document.querySelector('.text1').style.color = '#000000';
+        }
+
+        function perderfoco2() {
+            document.querySelector('.text2').style.color = '#000000';
+        }
+    </script>
+</body>
+
+</html>

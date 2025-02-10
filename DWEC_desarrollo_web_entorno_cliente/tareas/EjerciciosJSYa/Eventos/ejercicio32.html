@@ -1,0 +1,50 @@
+<!--
+Modificar el segundo problema resuelto (las casillas de la tabla que cambian el color cuando
+ingresamos con el mouse) para permitir llamar mediante hipervínculos a distintos programas
+que administran web-mail (gmail, hotmail y yahoo)
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <a onMouseOver='abrir_Popup(this)' onMouseOut='close_Popup()' href="http://www.gmail.com/">gmail</a>
+            </td>
+            <td>
+                <a onMouseOver='abrir_Popup(this)' onMouseOut='close_Popup()' href="http://www.hotmail.com/">hotmail</a>
+            </td>
+            <td>
+                <a onMouseOver='abrir_Popup(this)' onMouseOut='close_Popup()' href="http://www.yahoo.com/">yahoo</a>
+            </td>
+        </tr>
+    </table>
+
+    <!-- SCRIPT -->
+    <script>
+        let popup;
+
+        function abrir_Popup(enlace) {
+            let url = enlace.getAttribute('href');
+
+            popup = window.open(
+                url,
+                "Google",
+                "top=300,left=200,width=500,height=500"
+            );
+        }
+
+        function close_Popup() {
+            popup.close();
+        }
+    </script>
+</body>
+
+</html>

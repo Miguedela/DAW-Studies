@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa la altura de la letra A con la barra en el centro: ");
+        int altura = scanner.nextInt();
+
+        if (altura < 3 || altura % 2 == 0) {
+            System.out.println("La altura debe ser un número impar mayor o igual a 3.");
+        } else {
+            imprimirLetraAConBarra(altura);
+        }
+    }
+
+    public static void imprimirLetraAConBarra(int altura) {
+        int mitad = altura / 2;
+        for (int i = 1; i <= altura; i++) {
+            for (int j = 1; j <= altura - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= 2 * i - 1; j++) {
+                if (i == mitad + 1 || j == 1 || j == 2 * i - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}

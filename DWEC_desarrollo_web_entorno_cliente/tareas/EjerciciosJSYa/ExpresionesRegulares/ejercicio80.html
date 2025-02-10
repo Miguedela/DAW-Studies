@@ -1,0 +1,28 @@
+<!--
+1. Validar que se ingrese un número de 3 dígitos enteros, el carácter punto y 2 dígitos decimales.
+Solicitar el ingreso de la coordenada de un punto. El formato a ingresar por teclado es:
+(999,999)
+
+2. Los números pueden tener entre 1 y 3 dígitos.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Presione F12 para poder visualizar la consola</h1>
+    <!-- SCRIPT -->
+    <script>
+        let expresion = /^\d{3}(\.\d{2})?$/;
+
+        // Comprobacion de la primera expresion regular
+        console.log(expresion.test('234.34'));
+    </script>
+</body>
+
+</html>

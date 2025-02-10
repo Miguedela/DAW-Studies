@@ -1,0 +1,45 @@
+<!--
+Crea un documento HTML que permita insertar, borrar, copiar y reemplazar el
+texto introducido en cuadro de texto.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addinsertAdjacenteHTML() {
+            let listaDinamica = document.getElementById("elementos");
+            let texto = document.getElementById("texto").value;
+
+            listaDinamica.insertAdjacentHTML('beforeend',
+                `<tr>
+                <td>${texto}</td>
+                <td><input type="button" onclick="borrar();" value="Borrar" /></td>
+                <td><input type="button" onclick="copiar(this);" value="Copiar" /></td>
+                <td><input type="button" onclick="reemplazar();" value="Reemplazar" /></td>
+                </tr>`);
+        }
+        function borrar() {
+
+        }
+        function copiar(texto) {
+            let listaDinamica = document.getElementById("elementos");
+            listaDinamica.insertAdjacentElement(texto)
+        }
+        function reemplazar() {
+
+        }
+    </script>
+</head>
+
+<body>
+    <table id="elementos">
+    </table>
+    Nuevo texto: <input type="text" id="texto" /></br>
+    <input type="button" onclick="addinsertAdjacenteHTML();" value="Añadir elto con insertAdjacenteHTML" />
+</body>
+
+</html>
