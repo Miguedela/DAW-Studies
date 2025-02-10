@@ -1,0 +1,53 @@
+<!--
+Crea un programa que simule el lanzamiento de un dado. Cuando se pulse un botón
+el dado irá cambiando aleatoriamente su valor cada 500msg durante un intervalo de
+tiempo de 5sg. Transcurrido ese tiempo el valor del dado permanecerá inalterado.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tirarDado() {
+            let dado = document.getElementById("dado");
+            let interval;
+            let elapsed = 0;
+
+            // Genera un valor aleatorio para el dado (1 a 6)
+            function randomDiceFace() {
+                let randomIndex = Math.round(Math.random() * 6) + 1;
+                console.log(randomIndex);
+                dado.innerHTML = `<img src="img/${randomIndex}.png" alt="caradado">`;
+            }
+
+            // Cambia el valor del dado cada 500ms
+            interval = setInterval(() => {
+                randomDiceFace();
+                elapsed += 500;
+
+                if (elapsed >= 5000) {
+                    clearInterval(interval); // Detiene el cambio después de 5 segundos
+                }
+            }, 500);
+        }
+    </script>
+    <style>
+        img {
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simulador de Lanzamiento de Dado</h1>
+    <div class="dado" id="dado">🎲</div><br>
+    <button onclick="tirarDado()">Lanzar Dado</button>
+</body>
+
+</html>

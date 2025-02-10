@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: inline;
+        }
+
+        table,
+        tr,
+        td,
+        th {
+            border: solid 1px black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Carrito usando localStorage</h1>
+
+    <p>Añade nuevos articulos al carrito</p>
+
+    <form action="#" method="post" id="aniadirArticulo">
+        Articulo: <input type="text" name="nombreArticulo" id="nombreArticulo">
+        Cantidad: <input type="number" name="cantidadArticulos" id="cantidadArticulos" value="1">
+        <input type="submit" value="Añadir">
+    </form>
+
+    <form action="#" method="post" id="vaciarCarrito">
+        <input type="submit" value="Vaciar">
+    </form>
+    <br><br>
+
+    <table id="tabla">
+        <tr>
+            <th>Artículo</th>
+            <th>Cantidad</th>
+        </tr>
+    </table>
+
+    <script>
+        let articulos = [];
+
+        addEventListener("load", iniciar);
+
+        function iniciar() {
+            if (localStorage.articulos) {
+                articulos = JSON.parse(localStorage.articulos);
+                rellenarTabla();
+            }
+
+            let formularioEnviar = document.getElementById('aniadirArticulo');
+            formularioEnviar.addEventListener('submit', aniadirArticulo);
+
+            let formularioVaciar = document.getElementById('vaciarCarrito');
+            formularioVaciar.addEventListener('submit', vaciarCarrito);
+
+            rellenarTabla();
+        }
+
+        function aniadirArticulo() {
+            articulos.push({
+                nombre: document.getElementById('nombreArticulo').value,
+                cantidad: document.getElementById('cantidadArticulos').value
+            })
+
+            actualizarLocalStorage();
+            rellenarTabla();
+        }
+
+        function vaciarCarrito() {
+            articulos = [];
+
+            actualizarLocalStorage();
+            rellenarTabla();
+        }
+
+        // metodo auxiliar para rellenar la tabla
+        function rellenarTabla() {
+            let tabla = document.getElementById('tabla');
+
+            tabla.innerHTML = `
+            <tr>
+                <th>Artículo</th>
+                <th>Cantidad</th>
+            </tr>`;
+
+            let fila;
+            let datosFila;
+            for (const articulo of articulos) {
+                fila = document.createElement("tr");
+                datosFila = `<td>${articulo.nombre}</td><td>${articulo.cantidad}</td>`;
+                fila.innerHTML = datosFila;
+                tabla.appendChild(fila);
+            }
+        }
+
+        // metodo auxiliar para actualizar el (LocalStorage)
+        function actualizarLocalStorage() {
+            localStorage.articulos = JSON.stringify(articulos);
+        }
+    </script>
+</body>
+
+</html>

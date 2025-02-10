@@ -1,0 +1,14 @@
+/* Colores usados: lawngreen, gray, darkred, white.
+Las filas tienen un borde inferior de 1px, solid. */
+tbody tr:first-child {
+  background-color: lawngreen;
+}
+
+tbody tr:last-child {
+  background-color: darkred;
+  color: white;
+}
+
+tbody td {
+  border-bottom: solid 1px gray;
+}

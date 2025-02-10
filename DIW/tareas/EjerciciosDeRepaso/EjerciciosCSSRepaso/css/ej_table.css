@@ -1,0 +1,36 @@
+/* completa la hoja del ejercicio_table.html para que, usando propiedades CSS
+relativas a tablas, el menú horizontal quede como en la imagen. Al pasar el cursor
+sobre los enlaces, el cursor cambia a una cruceta (crosshair). */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+nav {
+  display: table;
+}
+
+nav ul {
+  display: table-row;
+  margin-left: 0px;
+  padding: 0px;
+}
+
+nav ul li {
+  display: table-cell;
+  padding: 1em;
+  background-color: orange;
+}
+
+nav ul li:nth-child(2n) {
+  background-color: green;
+}
+
+nav ul li:hover {
+  cursor: crosshair;
+}
+
+a {
+  text-decoration: none;
+}

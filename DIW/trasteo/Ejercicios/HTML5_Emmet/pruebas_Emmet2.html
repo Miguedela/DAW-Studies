@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    1. Una lista de 4 enlaces dentro de un div que pertenecerá a la clase cabecera, todo dentro de la etiqueta semántica <nav>,
+    teniendo en cuenta que <ul> pertenecerá a la clase navbar y los elementos <li> a navitems.
+        nav>div.cabecera>ul.navbar>li.navitems*4>a
+    -->
+    <nav>
+        <div class="cabecera">
+            <ul class="navbar">
+                <li class="navitems"><a href=""></a></li>
+                <li class="navitems"><a href=""></a></li>
+                <li class="navitems"><a href=""></a></li>
+                <li class="navitems"><a href=""></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--
+    2. Dentro de la etiqueta semántica <main>, tres div que pertenezcan a la clase card y dentro de cada div una imagen
+    perteneciente a la clase imgcard y un titular de nivel 3. Las imágenes a cargar son imagen1.jpg, imagen2.jpg e imagen3.jpg,
+    que están en la carpeta img.
+        main>div.card*3>img.imgcard[src="imagen$.jpg" alt="imagen$.jpg"]+h3
+    -->
+    <main>
+        <div class="card">
+            <img src="imagen1.jpg" alt="imagen1.jpg" class="imgcard">
+            <h3></h3>
+        </div>
+        <div class="card">
+            <img src="imagen2.jpg" alt="imagen2.jpg" class="imgcard">
+            <h3></h3>
+        </div>
+        <div class="card">
+            <img src="imagen3.jpg" alt="imagen3.jpg" class="imgcard">
+            <h3></h3>
+        </div>
+    </main>
+
+    <!--
+    3. Un lista de definición para 5 elementos dentro de un div que pertenezca a la clase seccion1, dentro de una sección HTML (<section>).
+        section>div.seccion1>dl>dt*5>dd
+    -->
+    <section>
+        <div class="seccion1">
+            <dl>
+                <dt>
+                    <dd></dd>
+                </dt>
+                <dt>
+                    <dd></dd>
+                </dt>
+                <dt>
+                    <dd></dd>
+                </dt>
+                <dt>
+                    <dd></dd>
+                </dt>
+                <dt>
+                    <dd></dd>
+                </dt>
+            </dl>
+        </div>
+    </section>
+
+    <!--
+    4. Otra sección que pertenezca a la clase seccion2 conteniendo 6 imágenes pertenecientes a la clase gallery.
+        section.seccion2>img.gallery*6
+    -->
+    <section class="seccion2"><img src="" alt="" class="gallery"><img src="" alt="" class="gallery"><img src="" alt="" class="gallery"><img src="" alt="" class="gallery"><img src="" alt="" class="gallery"><img src="" alt="" class="gallery"></section>
+
+    <!--
+    5. Dentro del pie de página HTML (<footer>): una etiqueta semántica <address> conteniendo tres párrafos, al mismo nivel un <div>
+    perteneciente a la clase pie, y al mismo nivel una sección perteneciente a la clase social con tres imágenes en su interior.
+        footer>adress>p*3+div.pie+section.social>img*3
+    -->
+    <footer>
+        <adress>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div class="pie"></div>
+            <section class="social"><img src="" alt=""><img src="" alt=""><img src="" alt=""></section>
+        </adress>
+    </footer>
+</body>
+</html>

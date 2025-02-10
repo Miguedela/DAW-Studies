@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    1) Solicitar el ingreso alguna de estas palabras (casa, mesa, perro, gato) luego
+    mostrar la palabra traducida en inglés. Es decir, si se ingresa 'casa' debemos mostrar
+    el texto 'house' en la página.
+    *Apartado 1) Prepara el programa para que el usuario pueda introducir además cuatro
+    palabras más en francés (las que quieras) y muestre la correspondiente traducción.
+    -->
+
+    <script>
+      let palabraIng = prompt(
+        "Ingrese alguna de estas palabras (casa, mesa, perro, gato) para traducirlas al ingles, o estas palabras (hola, adios, caballo, campo) para traducirlas al frances"
+      );
+      switch (palabra) {
+        case "casa":
+          document.write("house");
+          break;
+        case "mesa":
+          document.write("table");
+          break;
+        case "perro":
+          document.write("dog");
+          break;
+        case "gato":
+          document.write("cat");
+          break;
+        case "hola":
+          document.write("Bonjour");
+          break;
+        case "adios":
+          document.write("au revoir");
+          break;
+        case "caballo":
+          document.write("cheval");
+          break;
+        case "campo":
+          document.write("champ");
+          break;
+        default:
+          document.write(
+            "Solo se puede traducir (casa, mesa, perro, gato, hola, adios, caballo o campo)"
+          );
+          break;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Formulario de Incidencia</title>
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- Icon library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar can go here -->
+    </header>
+
+    <main>
+        <div class="container-fluid">
+
+            <div class="row justify-content-center">
+                <div class="col-md-8 mt-3">
+
+                    <!-- Formulario -->
+                    <form action="#" method="post" class="bg-light p-4 needs-validation" novalidate>
+                        <legend class="mb-4"><i class="bi bi-people me-"></i>Parte de incidencia</legend>
+
+                        <!-- Nombre de Alumno -->
+                        <div class="mb-3 form-floating position-relative">
+                            <input type="text" name="nombre" id="input-nombre" class="form-control" placeholder=""
+                                required />
+                            <label for="input-nombre">Nombre del Alumno:</label>
+                            <div class="valid-tooltip">Campo válido</div>
+                            <div class="invalid-tooltip">Debes de ingresar el nombre del alumno.</div>
+                        </div>
+
+                        <!-- Nombre de Profesor -->
+                        <div class="mb-5 form-floating position-relative">
+                            <input type="text" name="profesor" id="input-profesor" class="form-control" placeholder=""
+                                required />
+                            <label for="input-profesor">Nombre del Profesor:</label>
+                            <div class="valid-tooltip">Campo válido</div>
+                            <div class="invalid-tooltip">Debes de ingresar el nombre del profesor.</div>
+                        </div>
+
+                        <!-- Curso y Grupo, Asignatura -->
+                        <div class="row mb-4">
+                            <div class="col-md-6 form-floating position-relative">
+                                <input type="text" name="curso_grupo" id="input-curso_grupo" class="form-control"
+                                    placeholder="" required />
+                                <label for="input-curso_grupo">Curso y Grupo:</label>
+                                <div class="valid-tooltip">Campo válido</div>
+                                <div class="invalid-tooltip">Debes de ingresar el curso y grupo del alumno.</div>
+                            </div>
+
+                            <div class="col-md-6 form-floating position-relative">
+                                <select name="asignatura" id="select-asignatura" class="form-select" required>
+                                    <option selected disabled>Seleccione Asignatura</option>
+                                    <option value="programacion">Programación</option>
+                                    <option value="base_de_datos">Base de Datos</option>
+                                    <option value="diseno_e_interfaces_web">Diseño e Interfaces Web</option>
+                                    <option value="desarrollo_web_entorno_cliente">Desarrollo Web Entorno Cliente
+                                    </option>
+                                    <option value="desarrollo_web_entorno_servidor">Desarrollo Web Entorno Servidor
+                                    </option>
+                                </select>
+                                <label for="select-asignatura">Asignatura:</label>
+                                <div class="valid-tooltip">Campo válido</div>
+                                <div class="invalid-tooltip">Debes de seleccionar una asignatura.</div>
+                            </div>
+                        </div>
+
+                        <!-- Fecha y Hora -->
+                        <div class="row mb-4">
+                            <div class="col-md-6 form-floating">
+                                <input type="date" name="fecha" id="input-fecha" class="form-control" placeholder=""
+                                    required />
+                                <label for="input-fecha">Fecha:</label>
+                                <div class="valid-tooltip">Campo válido</div>
+                                <div class="invalid-tooltip">Debes de ingresar la fecha.</div>
+                            </div>
+
+                            <div class="col-md-6 form-floating">
+                                <input type="time" name="hora" id="input-hora" class="form-control" placeholder=""
+                                    required />
+                                <label for="input-hora">Hora:</label>
+                                <div class="valid-tooltip">Campo válido</div>
+                                <div class="invalid-tooltip">Debes de ingresar la hora.</div>
+                            </div>
+                        </div>
+
+                        <!-- Conducta Originada -->
+                        <div class="mb-5 form-floating">
+                            <textarea class="form-control" placeholder="Descripción de la conducta"
+                                id="floatingTextarea" name="conducta" rows="4" required></textarea>
+                            <label for="floatingTextarea">Conducta Originada:</label>
+                            <div class="valid-tooltip">Campo válido</div>
+                            <div class="invalid-tooltip">Debes de describir la conducta originada.</div>
+                        </div>
+
+                        <!-- Gravedad de la Incidencia -->
+                        <div class="mb-3">
+                            <label for="select-gravedad" class="form-label">Gravedad de la Incidencia:</label>
+                            <select name="gravedad" id="select-gravedad" class="form-select" required>
+                                <option selected disabled>Seleccione gravedad de la incidencia</option>
+                                <option value="grave">Grave</option>
+                                <option value="intermedia">Intermedia</option>
+                                <option value="leve">Leve</option>
+                            </select>
+                            <div class="valid-tooltip">Campo válido</div>
+                            <div class="invalid-tooltip">Debes seleccionar la gravedad.</div>
+                        </div>
+
+                        <!-- Recordatorio -->
+                        <div class="form-check form-switch mb-4">
+                            <input type="checkbox" name="remember" id="check-remember" class="form-check-input" />
+                            <label for="check-remember" class="form-check-label">Recuérdame</label>
+                        </div>
+
+                        <!-- Botón de Enviar -->
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-outline-dark">Enviar <i
+                                    class="bi bi-arrow-up-right-square"></i></button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer can go here -->
+    </footer>
+
+    <!-- Bootstrap JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alineaciones en CSS Grid</title>
+    <style>
+        /* === Estilos Generales === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 100px 100px;
+            gap: 10px;
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        .item {
+            background-color: lightblue;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* === 1. Justify-items: Alineación Horizontal por Celda === */
+        .justify-items-example {
+            justify-items: center;
+            /* center, start, end, stretch */
+        }
+
+        /* === 2. Align-items: Alineación Vertical por Celda === */
+        .align-items-example {
+            align-items: end;
+            /* center, start, end, stretch */
+        }
+
+        /* === 3. Place-items: Combinación de align-items y justify-items === */
+        .place-items-example {
+            place-items: center;
+            /* shorthand: align-items justify-items */
+        }
+
+        /* === 4. Justify-content: Alineación Horizontal del Grid === */
+        .justify-content-example {
+            justify-content: space-around;
+            /* start, center, end, space-between, space-around, space-evenly */
+        }
+
+        /* === 5. Align-content: Alineación Vertical del Grid === */
+        .align-content-example {
+            align-content: center;
+            /* start, center, end, space-between, space-around, space-evenly */
+        }
+
+        /* === 6. Place-content: Combinación de align-content y justify-content === */
+        .place-content-example {
+            place-content: center space-between;
+            /* shorthand: align-content justify-content */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Alineaciones en CSS Grid</h1>
+
+    <h2>1. justify-items: Alineación Horizontal por Celda</h2>
+    <div class="grid-container justify-items-example">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2>2. align-items: Alineación Vertical por Celda</h2>
+    <div class="grid-container align-items-example">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2>3. place-items: Combina align-items y justify-items</h2>
+    <div class="grid-container place-items-example">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2>4. justify-content: Alineación Horizontal del Grid</h2>
+    <div class="grid-container justify-content-example">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2>5. align-content: Alineación Vertical del Grid</h2>
+    <div class="grid-container align-content-example" style="height: 300px;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2>6. place-content: Combina align-content y justify-content</h2>
+    <div class="grid-container place-content-example" style="height: 300px;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+
+</html>

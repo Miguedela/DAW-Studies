@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // Clase persona
+      class Persona {
+        // CONSTRUCTOR
+        constructor(nombre, edad) {
+          this._nombre = nombre;
+          this._edad = edad;
+        }
+
+        // GETTERS AND SETTERS
+        get nombre() {
+          return this._nombre;
+        }
+
+        set nombre(nombre) {
+          this._nombre = nombre;
+        }
+
+        get edad() {
+          return this._edad;
+        }
+
+        set edad(edad) {
+          this._edad = edad;
+        }
+
+        // TO-STRING
+        toString() {
+          return `Nombre: ${this._nombre}, Edad: ${this._edad}`;
+        }
+      }
+
+      // Clase empleado con herencia de persona
+      class Empleado extends Persona {
+        // CONSTRUCTOR
+        constructor(nombre, edad, sueldo) {
+          super(nombre, edad);
+          this._sueldo = sueldo;
+        }
+
+        // GETTERS AND SETTERS
+        get sueldo() {
+          return this._sueldo;
+        }
+
+        set sueldo(sueldo) {
+          this._sueldo = sueldo;
+        }
+
+        // TO-STRING
+        toString() {
+          return `${super.toString()}, Sueldo: ${this._sueldo}`;
+        }
+      }
+
+      //   -----------------------------------------EJECUCIÓN-------------------------------------------------
+      // Ejemplo de uso
+      const persona = new Persona("Juan", 30);
+      console.log(persona.toString()); // To-String de persona "Juan"
+
+      const empleado = new Empleado("María", 40, 3000);
+      console.log(empleado.toString()); // To-String de empleada "María"
+
+      // Array empleados
+      const empleados = [
+        new Empleado("Juan", 18, 1250),
+        new Empleado("Ana", 15, 870),
+        new Empleado("Zamudio", 21, 1320),
+        new Empleado("María", 19, 1650),
+      ];
+
+      console.log("---------------Array sin ordenar---------------");
+      empleados.forEach((empleado) => console.log(empleado.toString())); // Muestro el array sin ordenar
+
+      console.log("---------------Ordeno el array por edad---------------");
+      // Ordeno de menor a mayor la edad
+      empleados.sort((a, b) => {
+        if (a.edad < b.edad) {
+          return -1;
+        } else {
+          return 1;
+        }
+      });
+      empleados.forEach((empleado) => console.log(empleado.toString())); // Muestro el array
+      console.log("---------------Ordeno el array por sueldo---------------");
+      // Ordeno de menor a mayor el sueldo
+      empleados.sort((a, b) => {
+        if (a.sueldo < b.sueldo) {
+          return -1;
+        } else {
+          return 1;
+        }
+      });
+      empleados.forEach((empleado) => console.log(empleado.toString())); // Muestro el array
+      console.log("---------------Ordeno el array por nombre---------------");
+      // Ordeno de menor a mayor el nombre
+      empleados.sort((a, b) => {
+        return a.nombre.localeCompare(b.nombre);
+      });
+      empleados.forEach((empleado) => console.log(empleado.toString())); // Muestro el array
+
+      console.log("---------------Array ordenado---------------");
+      empleados.forEach((empleado) => console.log(empleado.toString())); // Muestro el array sin ordenar
+    </script>
+  </head>
+  <body>
+    <h1>Ejercicios de personas y empleados</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+  </body>
+</html>

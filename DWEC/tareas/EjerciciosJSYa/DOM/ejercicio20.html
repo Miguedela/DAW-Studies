@@ -1,0 +1,53 @@
+<!--
+Definir un div con tres párrafos. Luego al presionar un botón mover el div a otro div
+ubicado debajo del botón.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function moverParrafos() {
+            let div1 = document.querySelector('.container1');
+            let div2 = document.querySelector('.container2');
+
+            div2.appendChild(div1);
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container1">
+        <p>
+            Lorem fistrum a wan diodeno te va a hasé pupitaa de la pradera condemor. Diodeno ese pedazo de papaar papaar
+            por la gloria de mi madre a gramenawer por la gloria de mi madre diodenoo apetecan hasta luego Lucas
+            apetecan benemeritaar. Caballo blanco caballo negroorl ahorarr te va a hasé pupitaa está la cosa muy malar
+            no puedor no puedor apetecan. Diodeno llevame al sircoo te va a hasé pupitaa ese hombree me cago en tus
+            muelas diodeno a peich hasta luego Lucas está la cosa muy malar. Se calle ustée jarl apetecan está la cosa
+            muy malar benemeritaar.
+        </p>
+        <p>
+            Lorem fistrum a wan diodeno te va a hasé pupitaa de la pradera condemor. Diodeno ese pedazo de papaar
+            papaar por la gloria de mi madre a gramenawer por la gloria de mi madre diodenoo apetecan hasta luego Lucas
+            apetecan benemeritaar. Caballo blanco caballo negroorl ahorarr te va a hasé pupitaa está la cosa muy malar
+            no puedor no puedor apetecan. Diodeno llevame al sircoo te va a hasé pupitaa ese hombree me cago en tus
+            muelas diodeno a peich hasta luego Lucas está la cosa muy malar. Se calle ustée jarl apetecan está la cosa
+            muy malar benemeritaar.
+        </p>
+        <p>
+            Lorem fistrum a wan diodeno te va a hasé pupitaa de la pradera condemor. Diodeno ese pedazo de papaar papaar
+            por la gloria de mi madre a gramenawer por la gloria de mi madre diodenoo apetecan hasta luego Lucas
+            apetecan benemeritaar. Caballo blanco caballo negroorl ahorarr te va a hasé pupitaa está la cosa muy malar
+            no puedor no puedor apetecan. Diodeno llevame al sircoo te va a hasé pupitaa ese hombree me cago en tus
+            muelas diodeno a peich hasta luego Lucas está la cosa muy malar. Se calle ustée jarl apetecan está la cosa
+            muy malar benemeritaar.
+        </p>
+    </div>
+    <input type="button" value="Mover los parrafos" onClick="moverParrafos()">
+    <div class="container2"></div>
+</body>
+
+</html>

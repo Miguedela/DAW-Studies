@@ -1,0 +1,43 @@
+<!--
+Elaborar un programa que muestre un div de color rojo. Cuando se presione cambiar el color
+a amarillo y luego de soltar el botón del mouse volver a pintar de rojo.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cambioColor {
+            background-color: red;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cambioColor">2</div>
+
+    <!-- SCRIPTS -->
+    <script>
+        addEventListener('load', inicio);
+
+        function inicio() {
+            document.querySelector('.cambioColor').addEventListener('mousedown', presionar);
+            document.querySelector('.cambioColor').addEventListener('mouseup', levantar);
+        }
+
+        function presionar() {
+            document.querySelector('.cambioColor').style.backgroundColor = '#ffff00';
+        }
+
+        function levantar() {
+            document.querySelector('.cambioColor').style.backgroundColor = '#ff0000';
+        }
+    </script>
+</body>
+
+</html>

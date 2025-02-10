@@ -1,0 +1,36 @@
+<!--
+Problema:
+Se cuenta con un vector con los siguiente valores:
+
+const dias=['lunes','martes','miércoles','jueves','viernes','sábado','domingo']
+Crear una lista ordenada cuando se presiona un botón.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function crearListaOrdenada() {
+            const dias = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'];
+            let lista = document.querySelector('.lista');
+            let cadena = "";
+
+            for (let dia of dias) {
+                cadena += `<li>${dia}</li>`
+                lista.innerHTML = cadena;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <ol class="lista">
+
+    </ol>
+    <input type="button" value="Generar lista" onclick="crearListaOrdenada()">
+</body>
+
+</html>

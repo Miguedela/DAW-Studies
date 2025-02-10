@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    1) Realizar un programa que lea por teclado dos números, si el primero es mayor al segundo informar su suma
+    y diferencia, en caso contrario informar el producto y la división del primero respecto al segundo.
+    2) Se ingresan tres notas de un alumno, si el promedio es mayor o igual a 4 mostrar un mensaje 'regular', sino 'reprobado'.
+    3) Se ingresa por teclado un número positivo de uno o dos dígitos (1..99) mostrar un mensaje indicando si
+    el número tiene uno o dos dígitos (recordar de convertir a entero con parseInt para preguntar posteriormente
+    por una variable entera). Tener en cuenta qué condición debe cumplirse para tener dos dígitos un número entero.
+    *Apartado 1) Preparar el programa para que trabaje con números decimales.
+    *Apartado 2) Preparar el programa para que trabaje con números decimales y se pueda indicar cuántas notas queremos introducir.
+    *Apartado 3) Preparar el programa para que se pueda introducir un número de uno a tres dígitos (1 - 999),
+    lo convierta a un entero e indique si el número tiene 1, 2 o 3 dígitos.
+    -->
+
+    <script>
+      let n1 = parseFloat(prompt("Introduce el primer numero: "));
+      let n2 = parseFloat(prompt("Introduce el segundo numero: "));
+      let sum = n1 + n2;
+      let res = n1 - n2;
+      let prod = n1 * n2;
+      let división = n1 / n2;
+
+      if (n1 > n2) {
+        volcarTextoWeb(
+          "La suma de los números es de: " + sum + ", y la resta es: " + res
+        );
+      } else {
+        volcarTextoWeb(
+          "El producto de los números es de: " +
+            prod +
+            ", y la division es: " +
+            división
+        );
+      }
+    </script>
+
+    <script>
+      let contadorNotas = parseFloat(
+        prompt("Cuantas notas desea introducir: ")
+      );
+      let cantidadNotas = 0;
+
+      for (let index = 0; index < contadorNotas; index++) {
+        let nota = parseFloat(prompt(`Ingrese nota ${index + 1}: `));
+        cantidadNotas += nota;
+      }
+
+      let promedio = parseFloat(cantidadNotas / contadorNotas);
+
+      if (promedio >= 4) {
+        volcarTextoWeb("Regular");
+      } else {
+        volcarTextoWeb("Reprobado");
+      }
+    </script>
+
+    <script>
+      let num = parseFloat(prompt("Introduce un número (0-999): "));
+
+      if (n > 9 && n < 100) {
+        volcarTextoWeb("Tiene 2 cifras");
+      } else if (n > 99) {
+        volcarTextoWeb("Tiene 3 cifras");
+      } else {
+        volcarTextoWeb("Tiene 1 cifra");
+      }
+    </script>
+  </body>
+</html>

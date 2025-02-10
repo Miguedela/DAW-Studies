@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.card {
+  margin: auto;
+  text-align: center;
+  width: 350px;
+  height: 450px;
+  border: solid 2px black;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px #333;
+}
+
+img {
+  border-radius: 100%;
+  margin-top: 2.5em;
+}
+
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 2.4em;
+}
+
+a {
+  padding: 1em;
+  margin-top: 1em;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(to top right, #320c68 60%, white);
+  border-radius: 5px;
+}
+
+h1 {
+  text-shadow:3px 3px 10px #333;
+  text-align: center;
+}
