@@ -1,8 +1,0 @@
-0001,La Caperucita Roja,Charles Perrault,true
-0003,El C�digo da Vinci,Dan Brown,true
-0004,El se�or de los anillos,J. R. R. Tolkien,true
-0005,El Principito,Antoine de Saint-Exup�ry,false
-0006,El diario de Ana Frank,Ana Frank,false
-0007,El Alquimista,Paulo Coelho,true
-0008,Harry Potter,J. K. Rowling,false
-0009,Cien años de soledad,Gabriel García Márquez,true
