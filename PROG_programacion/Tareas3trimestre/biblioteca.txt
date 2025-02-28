@@ -1,4 +1,0 @@
-Don Quijote,Cervante,1605,no disponible
-Hola,Cervante,1605,disponible
-Adios,Juan,1605,disponible
-Pepe,Keyn,105,disponible

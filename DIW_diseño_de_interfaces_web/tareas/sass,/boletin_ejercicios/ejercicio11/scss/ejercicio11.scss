@@ -1,8 +1,0 @@
-@use '_reset';
-@use '_general' as g;
-@use '_colors' as c;
-
-body {
-    color: c.$bodycolor;
-    font-size: c.$bodysize;
-}

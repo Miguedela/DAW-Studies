@@ -1,3 +1,0 @@
-Luis Mejias,20,Subdito,1
-Miguel Ángel,20,Rey,100000
-Manuel Valero,500,Subdito,0.50

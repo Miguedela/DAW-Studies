@@ -1,3 +1,0 @@
-Ejercicio_simulacro1
-	Son imprescindiples las lineas: 1, 6, 10, 11, 12
-	Y creo que falta una lina de codigo la cual es crear una variable Scanner, o en el caso de este codigo "sc".

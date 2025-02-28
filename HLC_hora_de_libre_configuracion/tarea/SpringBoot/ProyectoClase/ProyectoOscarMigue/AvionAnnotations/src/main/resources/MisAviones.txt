@@ -1,3 +1,0 @@
-nombre=Boing777
-combustible=200
-velocidad=220

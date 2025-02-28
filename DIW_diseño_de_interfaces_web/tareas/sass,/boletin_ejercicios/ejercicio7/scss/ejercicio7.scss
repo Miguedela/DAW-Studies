@@ -1,9 +1,0 @@
-@use 'sass:math';
-
-@function funcion-prueba($tamano, $numeroPartes) {
-    @return math.div($tamano, $numeroPartes);
-}
-
-.decimo {
-    width: funcion-prueba(1500px, 3);
-}
