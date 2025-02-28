@@ -1,0 +1,27 @@
+describe("primerLunesUltimoDomingo", function () {
+  // NO SE PUEDE CAMBIAR LA ESTRUCTURA DE LOS DATOS SUMINISTRADOS
+  const datos = [
+    { entrada: { año: 1942, mes: 3 }, primerLunes: 2, ultimoDomingo: 29 },
+    { entrada: { año: 1946, mes: 12 }, primerLunes: 2, ultimoDomingo: 29 },
+    { entrada: { año: 1973, mes: 4 }, primerLunes: 2, ultimoDomingo: 29 },
+    { entrada: { año: 1975, mes: 2 }, primerLunes: 3, ultimoDomingo: 23 },
+    { entrada: { año: 1996, mes: 11 }, primerLunes: 4, ultimoDomingo: 24 },
+  ];
+
+  datos.forEach((fecha) => {
+    it(
+      "debería devolver Lunes: " +
+        fecha.primerLunes +
+        " Domingo: " +
+        fecha.ultimoDomingo,
+      function () {
+        expect(
+          primerLunesUltimoDomingo(fecha.entrada.año, fecha.entrada.mes)
+        ).toEqual({
+          primerLunes: fecha.primerLunes,
+          ultimoDomingo: fecha.primerLunes,
+        });
+      }
+    );
+  });
+});

@@ -1,0 +1,36 @@
+@use 'sass:math';
+
+// VARIABLES
+$nombreAncho: 1200px;
+$mitad: math.div($nombreAncho, 2);
+$cuarto: math.div($nombreAncho, 4);
+$octavo: math.div($nombreAncho, 8);
+
+div {
+    background-color: tomato;
+    margin: 1rem auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: $nombreAncho;
+    background-color: #9999;
+    margin: 0 auto;
+}
+
+.mitad {
+    width: $mitad;
+}
+
+.cuarto {
+    width: $cuarto;
+}
+
+.octavo {
+    width: $octavo;
+}
+
+@debug math.pow(2, 4);

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- CONTENEDOR PRINCIPAL -->
+    <div class="container">
+        <!-- HEADER -->
+        <header class="header">
+            <!-- Logo del header -->
+            <div class="header__logo">
+                <img src="img/logo.png" alt="img__logo">
+            </div>
+            <!-- Nav -->
+            <nav class="nav">
+                <!-- Lista -->
+                <ul class="lista">
+                    <!-- Elemento de la lista -->
+                    <li class="lista__elemento ">
+                        <a class="elemento__enlace elemento__enlace--destacado" href="#">Crear Grupo</a>
+                    </li>
+                    <!-- Elemento del nav -->
+                    <li class="lista__elemento">
+                        <a class="elemento__enlace" href="#">Iniciar Sesión</a>
+                    </li>
+                    <!-- Elemento del nav -->
+                    <li class="lista__elemento">
+                        <a class="elemento__enlace" href="#">Registrarse</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- HERO -->
+        <div class="hero">
+            <h1 class="hero__texto">ENCUENTRA O CREA UN GRUPO PARA COMPARTIRLO LO QUE MÁS TE GUSTA</h1>
+            <div class="hero__boton">
+                <a class="hero__boton__enlace" href="#">Obtener una cuenta</a>
+            </div>
+        </div>
+        <!-- CONTACTO -->
+        <div class="contacto">
+            <h1 class="contacto__texto">BUSCA UN GRUPO EN TU CIUDAD</h1>
+            <div class="contacto_inputs">
+                <select class="contacto__input contacto__input--select" name="tipoGrupo">
+                    <option value="programacion">Programación</option>
+                    <option value="basedatos">Base de Datos</option>
+                    <option value="diseñointerfaceswev">Diseño de Intefaces WEB</option>
+                </select>
+                <input class="contacto__input" type="text" name="nombrEvento" placeholder="Nombre Evento">
+                <input class="contacto__input" type="text" name="nombrEvento" placeholder="Ciudad o País">
+                <div class="contacto__boton">
+                    <a class="contacto__boton__enlace" href="#">Buscar</a>
+                </div>
+            </div>
+        </div>
+        <!-- MAIN (eventos) -->
+        <main class="main">
+            <!-- Titulo del main -->
+            <h1 class="eventos__titulo">PRÓXIMOS EVENTOS</h1>
+            <!-- Contenedor de los eventos -->
+            <div class="main__eventos">
+                <!-- Evento -->
+                <div class="eventos__evento">
+                    <div class="evento__imagen">
+                        <img class="evento__imagen__img" src="img/imagen1.jpg" alt="imgEvento">
+                    </div>
+                    <div class="evento__evtinfo">
+                        <p class="evtinfo__fecha">Jueves 28 de noviembre de 2024</p>
+                        <h2 class="evtinfo__titulo">Hackathon Intercentros</h2>
+                        <div class="evtinfo__organizador">
+                            <div class="organizador__imagen">
+                                <img class="organizador__imagen__img" src="img/perfil1.jpg" alt="imgOrganizador">
+                            </div>
+                            <div class="organizador__info">
+                                <p class="info__titulo">Organizado por:</p>
+                                <p class="info__responsable">Ayuntamiento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Evento -->
+                <div class="eventos__evento">
+                    <div class="evento__imagen">
+                        <img class="evento__imagen__img" src="img/imagen2.jpg" alt="imgEvento">
+                    </div>
+                    <div class="evento__evtinfo">
+                        <p class="evtinfo__fecha">Jueves 5 de noviembre de 2024</p>
+                        <h2 class="evtinfo__titulo">Programación web</h2>
+                        <div class="evtinfo__organizador">
+                            <div class="organizador__imagen">
+                                <img class="organizador__imagen__img" src="img/perfil2.jpg" alt="imgOrganizador">
+                            </div>
+                            <div class="organizador__info">
+                                <p class="info__titulo">Organizado por:</p>
+                                <p class="info__responsable">IES Ruiz Gijón</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Evento -->
+                <div class="eventos__evento">
+                    <div class="evento__imagen">
+                        <img class="evento__imagen__img" src="img/imagen3.jpg" alt="imgEvento">
+                    </div>
+                    <div class="evento__evtinfo">
+                        <p class="evtinfo__fecha">Martes 10 de noviembre de 2024</p>
+                        <h2 class="evtinfo__titulo">Pizza paso a paso</h2>
+                        <div class="evtinfo__organizador">
+                            <div class="organizador__imagen">
+                                <img class="organizador__imagen__img" src="img/perfil3.jpg" alt="imgOrganizador">
+                            </div>
+                            <div class="organizador__info">
+                                <p class="info__titulo">Organizado por:</p>
+                                <p class="info__responsable">Massimo Santoro</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CATEGORIAS -->
+            <div class="main__categorias">
+                <h1 class="categorias__titulo">CATEGORÍAS</h1>
+                <div class="container__categorias">
+                    <div class="categorias__caregoria categorias__caregoria--categoria1">
+                        <h2 class="categoria__titulo">Crea un Grupo</h2>
+                        <p class="categoria__texto">Comparte lo que te gusta o tu pasión con los demás, crea tu propio
+                            grupo
+                            y
+                            eventos; hoy mismo, gratis</p>
+                    </div>
+                    <div class="categorias__caregoria categorias__caregoria--categoria2">
+                        <h2 class="categoria__titulo">Únete a un grupo</h2>
+                        <p class="categoria__texto">Conoce personas con tus mismos gustos y pasiones, únete a un grupo
+                            ya
+                            existente y asiste a próximos eventos</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- FOOTER -->
+        <div class="footer">
+            <!-- Lista -->
+            <ul class="lista">
+                <!-- Elemento de la lista -->
+                <li class="lista__elemento ">
+                    <a class="elemento__enlace elemento__enlace--destacado" href="#">Crear Grupo</a>
+                </li>
+                <!-- Elemento del nav -->
+                <li class="lista__elemento">
+                    <a class="elemento__enlace" href="#">Iniciar Sesión</a>
+                </li>
+                <!-- Elemento del nav -->
+                <li class="lista__elemento">
+                    <a class="elemento__enlace" href="#">Registrarse</a>
+                </li>
+            </ul>
+            <p class="footer__derechos">Todos los derechos reservados. Metti</p>
+        </div>
+    </div>
+</body>
+
+</html>

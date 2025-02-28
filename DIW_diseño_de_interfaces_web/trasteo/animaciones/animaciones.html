@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3: Transformaciones, Transiciones y Animaciones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            background-color: #f4f4f4;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5rem;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+
+        /* TRANSFORMACIONES */
+        .translate {
+            background-color: blue;
+            transform: translate(30px, -25px);
+        }
+
+        .scale {
+            background-color: green;
+            transform: scale(1.5);
+        }
+
+        .rotate {
+            background-color: red;
+            transform: rotate(45deg);
+        }
+
+        .skew {
+            background-color: purple;
+            transform: skew(20deg, 10deg);
+        }
+
+        .rotate-scale {
+            background-color: brown;
+            transform: rotate(30deg) scale(1.2);
+        }
+
+        /* TRANSICIONES */
+        .transition {
+            background-color: orange;
+            transition: transform 1s, background-color 1.5s;
+        }
+
+        .transition:hover {
+            transform: scale(1.3) rotate(10deg);
+            background-color: lightblue;
+        }
+
+        /* ANIMACIONES */
+        @keyframes cambiarColor {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: coral;
+            }
+
+            50% {
+                background-color: yellow;
+            }
+
+            75% {
+                background-color: chocolate;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+
+        .animacion {
+            animation: cambiarColor 3s infinite alternate;
+            background-color: red;
+        }
+
+        @keyframes mover {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(50px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .animacion-movimiento {
+            animation: mover 2s infinite ease-in-out;
+            background-color: teal;
+        }
+
+        /* CLIP-PATH */
+        .clip-circle {
+            background-color: cyan;
+            clip-path: circle(50% at center);
+        }
+
+        .clip-polygon {
+            background-color: magenta;
+            clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejemplos de CSS3</h1>
+
+    <h2>Transformaciones</h2>
+    <div class="container">
+        <div class="box translate">Translate</div>
+        <div class="box scale">Scale</div>
+        <div class="box rotate">Rotate</div>
+        <div class="box skew">Skew</div>
+        <div class="box rotate-scale">Rotate & Scale</div>
+    </div>
+
+    <h2>Transiciones</h2>
+    <div class="container">
+        <div class="box transition">Hover aquí</div>
+    </div>
+
+    <h2>Animaciones</h2>
+    <div class="container">
+        <div class="box animacion">Color</div>
+        <div class="box animacion-movimiento">Movimiento</div>
+    </div>
+
+    <h2>Clip-Path</h2>
+    <div class="container">
+        <div class="box clip-circle">Circle</div>
+        <div class="box clip-polygon">Polygon</div>
+    </div>
+</body>
+
+</html>

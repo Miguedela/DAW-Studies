@@ -1,0 +1,17 @@
+h1 {
+  color: red;
+}
+
+h1 {
+  color: sans-serif;
+}
+
+p {
+  color: green;
+}
+
+main div p {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=ejemplo1.css.map */

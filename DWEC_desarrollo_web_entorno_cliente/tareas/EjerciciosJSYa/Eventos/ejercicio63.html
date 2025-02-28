@@ -1,0 +1,37 @@
+<!--
+Realizar un programa que muestre en un div el número 2. Cada vez que se hace doble
+clic sobre el mismo duplicar el valor contenido en el div.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clicks {
+            background-color: darkcyan;
+            height: 150px;
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clicks">2</div>
+
+    <!-- SCRIPTS -->
+    <script>
+        document.querySelector('.clicks').addEventListener('dblclick', duplicar);
+
+        function duplicar() {
+            let valor = document.querySelector('.clicks').innerHTML;
+            valor = parseInt(valor);
+            let resultado = valor * 2;
+            document.querySelector('.clicks').innerHTML = resultado;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Calibri';
+}
+
+.enlace {
+    background-color: blue;
+    color: white;
+    margin: 20px;
+    padding: 20px 30px;
+    display: inline-block;
+    transition-duration: 0.5s;
+}
+
+.enlace:active {
+    transform: scale(1.1);
+    transition-duration: 0.1s;
+}
+
+.giratorio {
+    width: 170px;
+    height: 170px;
+    /* background-color: maroon; */
+    background-image: url(../img/FotodeperfilSteam.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+
+    transition-duration: 1s;
+}
+
+.giratorio:target {
+    transform: rotate(360deg);
+    transition-duration: 1s;
+}
