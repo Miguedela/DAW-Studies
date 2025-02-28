@@ -1,0 +1,14 @@
+header h1 {
+  color: red;
+}
+
+main h2 {
+  color: green;
+}
+
+footer h4,
+footer a {
+  color: blue;
+}
+
+/*# sourceMappingURL=ejercicio5.css.map */

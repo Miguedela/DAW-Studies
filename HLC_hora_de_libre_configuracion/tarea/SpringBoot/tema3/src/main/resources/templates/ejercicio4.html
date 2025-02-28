@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <style>
+        table,
+        tr,
+        td,
+        th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+
+        <tr>
+            <th>Nombre</th>
+            <th>Asunto</th>
+            <th>Enlaces</th>
+        </tr>
+
+        <tr th:each="anuncio: ${anuncios}">
+            <td th:text="${anuncio.nombre}" />
+            <td th:text="${anuncio.asunto}" />
+            <td><a href="">Ver</a></td>
+        </tr>
+    </table>
+
+    <a href="/formulario4">Insertar nuevo anuncio</a>
+
+</body>
+
+</html>

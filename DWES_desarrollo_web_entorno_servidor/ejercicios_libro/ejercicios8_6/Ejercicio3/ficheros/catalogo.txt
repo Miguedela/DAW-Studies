@@ -1,0 +1,2 @@
+JD3;Jhon Deere 003;12599.99;img/tractor3.jfif;tractor potentisimo
+JD4;manuel 30;9999;img/images.jfif;la tabla del 45

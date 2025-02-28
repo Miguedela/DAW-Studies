@@ -1,0 +1,23 @@
+$rojo: red;
+$verde: green;
+$azul: blue;
+
+
+header {
+    h1 {
+        color: $rojo;
+    }
+}
+
+main {
+    h2 {
+        color: $verde;
+    }
+}
+
+footer {
+    h4,
+    a {
+        color: $azul;
+    }
+}

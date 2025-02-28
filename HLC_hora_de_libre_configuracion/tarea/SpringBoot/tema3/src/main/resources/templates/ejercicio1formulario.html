@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'Calibri';
+        }
+
+        form {
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/anuncio">
+        <label for="nombre">Nombre: </label>
+        <input type="text" name="nombre">
+        <br><br>
+        <label for="asunto">Asunto: </label>
+        <input type="text" name="asunto">
+        <br><br>
+        <label for="cuerpo">Cuerpo: </label>
+        <textarea name="cuerpo"></textarea>
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+</body>
+
+</html>
