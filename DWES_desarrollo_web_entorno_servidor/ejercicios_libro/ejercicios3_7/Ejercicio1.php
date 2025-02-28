@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        background-color: gray;
+        color: white;
+    }
+</style>
+
+<body>
+    <?php
+    $hora = $_GET['a'];
+    $b = $_GET['b'];
+    echo "El volumen del cilindro es: ", 3.14 * (($b / 2) * ($b / 2)) * $hora;
+    ?>
+    <img src="img/cilindro.png" alt="Imagen del cilindro">
+</body>
+
+</html>

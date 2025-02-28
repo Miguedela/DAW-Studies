@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>Configura tu página:</h3>
+    <form action="Ejercicio3.php" method="get">
+      Color de fondo:
+      <input type="color" name="a" required /><br />
+      Tipo de letra:
+      <select name="b" required>
+        <option value="none">Normal</option>
+        <option value="bold">Negrita</option>
+      </select>
+      <br />
+      Ubicacion de contenido:
+      <select name="c" required>
+        <option value="left">Izquierda</option>
+        <option value="center">Centro</option>
+        <option value="right">Derecha</option>
+      </select>
+      <br />
+      Banner:
+      <input type="file" name="d" accept="image/*" required />
+      <br />
+      Color de la letra:
+      <input type="color" name="e" required />
+      <br /><br />
+      <input type="submit" value="Generar" />
+    </form>
+  </body>
+</html>

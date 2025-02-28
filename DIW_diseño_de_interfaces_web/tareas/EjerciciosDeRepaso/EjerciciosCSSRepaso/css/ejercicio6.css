@@ -1,0 +1,48 @@
+/* El cuerpo del documento será de color blanco con el texto en gris. Los titulares, color rojo. */
+body {
+  background-color: white;
+  color: gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: red;
+}
+
+/* Los enlaces tendrán color rojo y tamaño de fuente 14px. No estarán subrayados, el subrayado aparecerá
+al pasar el ratón por encima de ellos. */
+a {
+  text-decoration: none;
+  color: red;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Los enlaces visitados tomarán el color gris. Los activos tendrán color azul. */
+a:visited {
+  color: gray;
+}
+
+a:active {
+  color: blue;
+}
+
+/* Los enlaces que reciban el "foco" cambiarán a tamaño 28px, con fondo negro. */
+a:focus {
+  font-size: 28px;
+  background-color: black;
+}
+
+/* También aplica una clase a la tabla para que tenga un borde punteado. */
+table,
+tr,
+td {
+  border: dotted 1px black;
+}

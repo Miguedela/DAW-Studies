@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class DibujarCuadradoVacio {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Ingresa el tamaño del cuadrado: ");
+        int tamaño = scanner.nextInt();
+
+        if (tamaño < 2) {
+            System.out.println("El tamaño debe ser un número mayor o igual a 2.");
+        } else {
+            dibujarCuadradoVacio(tamaño);
+        }
+    }
+
+    public static void dibujarCuadradoVacio(int tamaño) {
+        for (int i = 1; i <= tamaño; i++) {
+            for (int j = 1; j <= tamaño; j++) {
+                if (i == 1 || i == tamaño || j == 1 || j == tamaño) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}

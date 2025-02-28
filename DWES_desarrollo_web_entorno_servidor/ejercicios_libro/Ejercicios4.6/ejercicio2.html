@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tablero de Lotería</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Estilo básico para crear un tablero en forma de cuadrícula */
+      .tablero {
+        display: grid;
+        grid-template-columns: repeat(7, 50px);
+        /* 7 columnas, cada celda de 50px */
+        gap: 10px;
+      }
+
+      .tablero label {
+        display: block;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Selecciona tus números de la lotería</h1>
+
+    <!-- Formulario que envía las selecciones mediante POST -->
+    <form action="ejercicio2redirection.php" method="post">
+      <div class="tablero">
+        <label><input type="checkbox" name="numero1" value="1" /> 01</label>
+        <label><input type="checkbox" name="numero2" value="2" /> 02</label>
+        <label><input type="checkbox" name="numero3" value="3" /> 03</label>
+        <label><input type="checkbox" name="numero4" value="4" /> 04</label>
+        <label><input type="checkbox" name="numero5" value="5" /> 05</label>
+        <label><input type="checkbox" name="numero6" value="6" /> 06</label>
+        <label><input type="checkbox" name="numero7" value="7" /> 07</label>
+        <label><input type="checkbox" name="numero8" value="8" /> 08</label>
+        <label><input type="checkbox" name="numero9" value="9" /> 09</label>
+        <label><input type="checkbox" name="numero10" value="10" /> 10</label>
+        <label><input type="checkbox" name="numero11" value="11" /> 11</label>
+        <label><input type="checkbox" name="numero12" value="12" /> 12</label>
+        <label><input type="checkbox" name="numero13" value="13" /> 13</label>
+        <label><input type="checkbox" name="numero14" value="14" /> 14</label>
+        <label><input type="checkbox" name="numero15" value="15" /> 15</label>
+        <label><input type="checkbox" name="numero16" value="16" /> 16</label>
+        <label><input type="checkbox" name="numero17" value="17" /> 17</label>
+        <label><input type="checkbox" name="numero18" value="18" /> 18</label>
+        <label><input type="checkbox" name="numero19" value="19" /> 19</label>
+        <label><input type="checkbox" name="numero20" value="20" /> 20</label>
+        <label><input type="checkbox" name="numero21" value="21" /> 21</label>
+        <label><input type="checkbox" name="numero22" value="22" /> 22</label>
+        <label><input type="checkbox" name="numero23" value="23" /> 23</label>
+        <label><input type="checkbox" name="numero24" value="24" /> 24</label>
+        <label><input type="checkbox" name="numero25" value="25" /> 25</label>
+        <label><input type="checkbox" name="numero26" value="26" /> 26</label>
+        <label><input type="checkbox" name="numero27" value="27" /> 27</label>
+        <label><input type="checkbox" name="numero28" value="28" /> 28</label>
+        <label><input type="checkbox" name="numero29" value="29" /> 29</label>
+        <label><input type="checkbox" name="numero30" value="30" /> 30</label>
+        <label><input type="checkbox" name="numero31" value="31" /> 31</label>
+        <label><input type="checkbox" name="numero32" value="32" /> 32</label>
+        <label><input type="checkbox" name="numero33" value="33" /> 33</label>
+        <label><input type="checkbox" name="numero34" value="34" /> 34</label>
+        <label><input type="checkbox" name="numero35" value="35" /> 35</label>
+        <label><input type="checkbox" name="numero36" value="36" /> 36</label>
+        <label><input type="checkbox" name="numero37" value="37" /> 37</label>
+        <label><input type="checkbox" name="numero38" value="38" /> 38</label>
+        <label><input type="checkbox" name="numero39" value="39" /> 39</label>
+        <label><input type="checkbox" name="numero40" value="40" /> 40</label>
+        <label><input type="checkbox" name="numero41" value="41" /> 41</label>
+        <label><input type="checkbox" name="numero42" value="42" /> 42</label>
+        <label><input type="checkbox" name="numero43" value="43" /> 43</label>
+        <label><input type="checkbox" name="numero44" value="44" /> 44</label>
+        <label><input type="checkbox" name="numero45" value="45" /> 45</label>
+        <label><input type="checkbox" name="numero46" value="46" /> 46</label>
+        <label><input type="checkbox" name="numero47" value="47" /> 47</label>
+        <label><input type="checkbox" name="numero48" value="48" /> 48</label>
+        <label><input type="checkbox" name="numero49" value="49" /> 49</label>
+      </div>
+      <br />
+      <input type="number" name="numeroSerie" />
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!--
+Confeccionar una página que contenga una lista de tipo (ul) y definir tres marcas de
+tipo (li) sin texto. Luego al presionar un botón agregar un nodo de texto a cada marca (li).
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function agregar() {
+            let elementos = document.querySelectorAll('ul li');
+            
+            elementos.forEach((elemento, index) => {
+                elemento.textContent = `Elemento ${index + 1}`;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <input type="button" value="Agregar nodo de texto" onClick="agregar()">
+</body>
+
+</html>

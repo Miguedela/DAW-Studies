@@ -1,0 +1,35 @@
+<!--
+Solicitar que se ingrese el nombre y la clave de un usuario. Mostrar una ventana de alerta
+si en la clave se ingresan menos de 7 caracteres o más de 20 (capturar el evento onBlur)
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="post">
+        Ingrese nombre de usuario:
+        <input type="text" id="usuario"><br>
+        Ingrese clave:
+        <input type="password" id="clave" onBlur="verificar(this)"><br>
+        <input type="button" value="Enviar">
+    </form>
+
+    <!-- SCRIPT -->
+    <script>
+        function verificar(clave) {
+            clave = clave.value;
+
+            if (clave.length < 7 || clave.length > 20) {
+                alert(`La clave es mayor que 20 o menor que 7, por favor introduzca una clave valida`);
+            }
+        }
+    </script>
+</body>
+
+</html>

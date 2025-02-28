@@ -1,0 +1,27 @@
+div {
+  background-color: tomato;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 1200px;
+  background-color: rgba(153, 153, 153, 0.6);
+  margin: 0 auto;
+}
+
+.mitad {
+  width: 600px;
+}
+
+.cuarto {
+  width: 300px;
+}
+
+.octavo {
+  width: 150px;
+}
+
+/*# sourceMappingURL=ejercicio3.css.map */

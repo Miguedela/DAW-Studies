@@ -1,0 +1,39 @@
+<!--
+Mostrar un elemento de tipo H1, luego cuando se ingrese con el mouse dentro del mismo cambiar
+el color a letra roja y color de fondo amarillo, luego cuando se mueva la flecha del mouse fuera
+del elemento volver al color original.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="cambioColor">Titulo H1</h1>
+
+    <!-- SCRIPTS -->
+    <script>
+        addEventListener('load', inicio);
+
+        function inicio() {
+            document.querySelector('.cambioColor').addEventListener('mouseover', presionar);
+            document.querySelector('.cambioColor').addEventListener('mouseout', levantar);
+        }
+
+        function presionar() {
+            document.querySelector('.cambioColor').style.backgroundColor = 'yellow';
+            document.querySelector('.cambioColor').style.color = 'red';
+        }
+
+        function levantar() {
+            document.querySelector('.cambioColor').style.backgroundColor = 'white';
+            document.querySelector('.cambioColor').style.color = 'black';
+        }
+    </script>
+</body>
+
+</html>

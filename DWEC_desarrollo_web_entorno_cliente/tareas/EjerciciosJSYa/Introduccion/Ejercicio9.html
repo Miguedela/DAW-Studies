@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--
+    *Apartado 4) Prepara el programa para que trabaje con números decimales
+    -->
+    <script>
+      let x = parseFloat(prompt("Ingrese coordenada x"));
+      let y = parseFloat(prompt("Ingrese coordenada y"));
+
+      if (x > 0 && y > 0) {
+        document.write("Se encuentra en el primer cuadrante");
+      } else if (x < 0 && y > 0) {
+        document.write("Se encuentra en el segundo cuadrante");
+      } else if (x < 0 && y < 0) {
+        document.write("Se encuentra en el tercer cuadrante");
+      } else if (x > 0 && y < 0) {
+        document.write("Se encuentra en el cuarto cuadrante");
+      } else {
+        document.write("Se encuentra sobre un eje");
+      }
+    </script>
+  </body>
+</html>

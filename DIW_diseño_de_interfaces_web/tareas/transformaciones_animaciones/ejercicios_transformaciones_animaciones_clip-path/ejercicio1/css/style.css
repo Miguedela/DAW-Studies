@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Calibri';
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container {
+    text-align: center;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    color: white;
+    margin: 10px;
+    transition: 0.5s;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.translate:hover {
+    transform: translate(20px, 20px);
+}
+
+.rotate:hover {
+    transform: rotate(45deg);
+}
+
+.scaleX:hover {
+    transform: scaleX(1.5);
+}
+
+.scaleY:hover {
+    transform: scaleY(1.5);
+}
+
+.scale:hover {
+    transform: scale(1.5);
+}
+
+.skewX:hover {
+    transform: skewX(20deg);
+}
+
+.skewY:hover {
+    transform: skewY(20deg);
+}
+
+.skew:hover {
+    transform: skew(20deg, 10deg);
+}

@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+article {
+  height: 300px;
+  float: left;
+}
+
+.red {
+  background-color: red;
+  width: 20%;
+}
+
+.blue {
+  background-color: blue;
+  width: 50%;
+}
+
+.yellow {
+  background-color: yellow;
+  width: 30%;
+}
+
+@media (max-width: 992px) {
+  .red,
+  .blue {
+    width: 50%;
+  }
+
+  .yellow {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .red,
+  .blue,
+  .yellow {
+    width: 100%;
+  }
+}

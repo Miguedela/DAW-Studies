@@ -1,0 +1,40 @@
+.fondo {
+    background-image: url('../img/libreria.jpg');
+}
+
+:root {
+    --bs-blue: #03A9F5;
+    --bs-green: #8BC24A;
+}
+
+.text-primary {
+    color: var(--bs-blue) !important;
+}
+
+.bg-primary {
+    background-color: var(--bs-blue) !important;
+}
+
+.btn-primary {
+    background-color: var(--bs-blue) !important;
+}
+
+.btn-primary:hover {
+    background-color: #038ecf !important;
+}
+
+.bg-green {
+    background-color: var(--bs-green) !important;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.h-40 {
+    height: 40%;
+}

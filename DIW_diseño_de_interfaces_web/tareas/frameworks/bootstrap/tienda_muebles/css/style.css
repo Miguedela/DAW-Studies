@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Playfair';
+    src: url('../fonts/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+:root {
+    --bg-blue: #037bc0;
+    --bg-green: #8cbc00;
+    --bg-hover: #769c02;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Raleway';
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair';
+}
+
+.btn-success {
+    background-color: var(--bg-green) !important;
+    transition-duration: 0.3s;
+}
+
+.btn-hover:hover {
+    background-color: var(--bg-hover) !important;
+}
+
+.bg-primary {
+    background-color: var(--bg-blue) !important;
+}
+
+.text-primary {
+    color: var(--bg-blue) !important;
+}
+
+.hero {
+    background-image: url('../img/principal.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 55rem;
+}
+
+/* Transiciones */
+.zoom {
+    transform: scale(1);
+    transition-duration: 0.3s;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+/* tamaño de los textos */
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* media query */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 3rem;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // CLASE JARRA
+      class Jarra {
+        // CONSTRUCTOR
+        constructor(capacidad, cantidad) {
+          this._capacidad = capacidad;
+          this._cantidad = cantidad > capacidad ? capacidad : cantidad;
+        }
+
+        // GETTERS AND SETTERS
+        get capacidad() {
+          return this._capacidad;
+        }
+
+        set capacidad(valor) {
+          this._capacidad = valor;
+          if (this._cantidad > this._capacidad) {
+            this._cantidad = this._capacidad;
+          }
+        }
+
+        // Getters y setters para cantidad
+        get cantidad() {
+          return this._cantidad;
+        }
+
+        set cantidad(valor) {
+          if (valor < 0) {
+            throw new Error("La cantidad debe ser un número positivo");
+          }
+          this._cantidad = valor > this._capacidad ? this._capacidad : valor;
+        }
+
+        // Metodos
+        llenar() {
+          this._cantidad = this._capacidad;
+        }
+
+        vaciar() {
+          this._cantidad = 0;
+        }
+
+        llenarDesde(jarra) {
+          const espacioDisponible = this._capacidad - this._cantidad;
+          if (jarra._cantidad <= espacioDisponible) {
+            this._cantidad += jarra._cantidad;
+            jarra.vaciar();
+          } else {
+            this._cantidad = this._capacidad;
+            jarra._cantidad -= espacioDisponible;
+          }
+        }
+
+        static comparar(jarra1, jarra2) {
+          return jarra1._cantidad > jarra2._cantidad ? jarra1 : jarra2;
+        }
+
+        jarrasConMasCantidad(...jarras) {
+          const resultado = [];
+          jarras.forEach((jarra) => {
+            if (jarra.cantidad > this._cantidad) {
+              resultado.push(jarra);
+            }
+          });
+          return resultado;
+        }
+
+        // TOSTRING
+        toString() {
+          return `Jarra(capacidad: ${this._capacidad} litros, cantidad: ${this._cantidad} litros)`;
+        }
+      }
+
+      // Función de testo
+      function testJarra() {
+        const jarra1 = new Jarra(10, 4); // Crearía un objeto jarra1 con capacidad 10 litros y llena con una cantidad de 4 litros.
+        const jarra2 = new Jarra(15, 8); // Crearía un objeto jarra2 con capacidad 15 litros y llena con una cantidad de 8 litros.
+
+        // Probamos el método estático para comparar la cantidad de dos jarras
+        let jarraConMasCantidad = Jarra.comparar(jarra1, jarra2); // Debería devolver jarra2, ya que contiene más litros que jarra1
+        console.log(`Jarra con más cantidad: ${jarraConMasCantidad}`);
+
+        // Probamos el método de llenar jarra1 desde jarra2
+        jarra1.llenarDesde(jarra2); // Llena jarra1 con el contenido que quepa de jarra2. A jarra1 le quedan 6 litros para llenarse, por lo que jarra1 debería llenarse completamente (4+6=10 litros) y jarra2 quedar con 2 litros (8-6= 2 litros)
+        console.log(
+          `cantidad jarra1: ${jarra1.cantidad} //Debería mostrar 10 litros)`
+        ); // Debería mostrar 10 litros
+        console.log(
+          `cantidad jarra2: ${jarra2.cantidad} (Debería mostrar 2 litros)`
+        ); // Debería mostrar 2 litros
+        // Probamos el método llenar()
+        jarra2.llenar(); //Debería llenarse completamente la jarra2
+        console.log(
+          `cantidad jarra2: ${jarra2.cantidad} (Debería mostrar 15 litros)`
+        ); // Debería mostrar 15 litros
+        // Probamos el método vaciar()
+        jarra2.vaciar(); //Debería vaciarse completamente la jarra2
+        console.log(
+          `cantidad jarra2: ${jarra2.cantidad} (Debería mostrar 0 litros)`
+        ); // Debería mostrar 0 litros
+        // Intentamos a asignar a la cantidad de jarra2 un valor que supere la capacidad
+        jarra2.cantidad = 30;
+        console.log(
+          `cantidad jarra2: ${jarra2.cantidad} (Debería mostrar 15 litros)`
+        ); // Debería mostrar 15 litros
+        // Intentamos a asignar a la cantidad de jarra2 un valor negativo
+        try {
+          jarra2.cantidad = -10;
+        } catch (error) {
+          console.log(`Se produjo el error: "${error.message}"`);
+        }
+        console.log(
+          `cantidad jarra2: ${jarra2.cantidad} (Debería mostrar 15 litros)`
+        ); // Debería mostrar 15 litro
+      }
+
+      testJarra();
+    </script>
+  </head>
+  <body>
+    <h1>Ejercicios de jarras</h1>
+    <h2>Pulsa F12 para ver la consola de depuración</h2>
+  </body>
+</html>

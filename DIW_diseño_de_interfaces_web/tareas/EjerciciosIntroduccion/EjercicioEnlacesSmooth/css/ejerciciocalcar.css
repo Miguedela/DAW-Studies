@@ -1,0 +1,76 @@
+:root {
+  --textshadow: 3px 5px 10px rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  width: 100%;
+  height: 4.5em;
+  background-color: #213a53;
+  padding-right: 50px;
+  position: fixed;
+  top: 0;
+}
+
+a {
+  height: 100%;
+  color: white;
+  text-decoration: none;
+  float: right;
+  padding: 25px;
+}
+
+a:hover {
+  color: #333;
+  background-color: white;
+}
+
+body {
+  height: 2564px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: top, center, bottom;
+}
+
+div {
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* ---------------------- */
+  color: white;
+  font-size: 4em;
+  text-shadow: var(--textshadow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  height: 100vh;
+  width: 100%;
+}
+
+.inicio {
+  background-image: url(../img/Cristiano.jpg);
+}
+
+.daw {
+  background-image: url(../img/maxresdefault.jpg);
+}
+
+.contacto {
+  background-image: url(../img/srek.png);
+}

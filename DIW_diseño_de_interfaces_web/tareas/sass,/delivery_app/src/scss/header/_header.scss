@@ -1,0 +1,23 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: v.$separation 0;
+
+    @include m.dektop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        width: 38rem;
+        margin-bottom: v.$separation;
+
+        @include m.dektop {
+            margin-bottom: 0;
+        }
+    }
+}

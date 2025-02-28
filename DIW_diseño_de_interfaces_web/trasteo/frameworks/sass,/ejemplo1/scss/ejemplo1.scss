@@ -1,0 +1,27 @@
+// Variables Sass
+// Estos comentarios no aparencen cuando se compila
+$color1: red;
+$color2: blue;
+$color3: green;
+
+$font1: sans-serif;
+
+h1 {
+    color: $color1;
+}
+
+h1 {
+    color: $font1;
+}
+
+p {
+    color: $color3;
+}
+
+main {
+    div {
+        p {
+            background-color: $color2;
+        }
+    }
+}

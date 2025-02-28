@@ -1,0 +1,15 @@
+$anchura: 20rem;
+$altura: 10rem;
+
+// Clase altura
+.container {
+    height: $altura;
+    background-color: tomato;
+}
+
+.contenedor-con-altura {
+    @extend .container; // Importo la clase altura
+
+    width: $anchura;
+    background-color: beige;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Sonriente</title>
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body onload="drawShape();">
+    <canvas id="mycanvas" width="200" height="200"></canvas>
+
+    <script type="text/javascript">
+        function drawShape() {
+            var canvas = document.getElementById('mycanvas');
+
+            if (canvas.getContext) {
+                var ctx = canvas.getContext('2d');
+
+                // Cara
+                ctx.beginPath();
+                ctx.arc(100, 100, 80, 0, Math.PI * 2, true); // Círculo exterior
+                ctx.fillStyle = 'lightblue';
+                ctx.fill();
+                ctx.stroke();
+
+                // Ojo izquierdo
+                ctx.beginPath();
+                ctx.arc(70, 80, 12, 0, Math.PI * 2, true); // Círculo
+                ctx.fillStyle = 'white';
+                ctx.fill();
+
+                // Ojo derecho
+                ctx.beginPath();
+                ctx.arc(130, 80, 9, 0, Math.PI * 2, true); // Círculo
+                ctx.fillStyle = 'white';
+                ctx.fill();
+
+                // Pupila izquierda
+                ctx.beginPath();
+                ctx.arc(70, 80, 6, 0, Math.PI * 2, true); // Círculo
+                ctx.fillStyle = 'black';
+                ctx.fill();
+
+                // Pupila derecha
+                ctx.beginPath();
+                ctx.arc(130, 80, 4, 0, Math.PI * 2, true); // Círculo
+                ctx.fillStyle = 'black';
+                ctx.fill();
+
+                // Boca
+                ctx.beginPath();
+                ctx.arc(100, 105, 50, 0, Math.PI * 0.7, false); // Boca (arco)
+                ctx.stroke();
+            } else {
+                alert('Tu navegador no soporta canvas.');
+            }
+        }
+    </script>
+</body>
+
+</html>

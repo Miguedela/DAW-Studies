@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script>
+    // Clase Piloto
+    class Piloto {
+      // CONSTRUCTOR
+      constructor(nombre) {
+        this._nombre = nombre;
+      }
+
+      // GETTERS Y SETTERS
+      get nombre() {
+        return this._nombre;
+      }
+
+      set nombre(nombre) {
+        this._nombre = nombre;
+      }
+    }
+
+    // Clase Aeroplano
+    class Aeroplano {
+      // CONSTRUCTOR
+      constructor(modelo, piloto, copiloto) {
+        this._modelo = modelo;
+        this._piloto = piloto;
+        this._copiloto = copiloto;
+      }
+
+      // GETTERS Y SETTERS
+      get modelo() {
+        return this._modelo;
+      }
+
+      set modelo(modelo) {
+        this._modelo = modelo;
+      }
+
+      // Método volar
+      volar() {
+        return `${this._modelo} esta volando con el piloto ${this._piloto.nombre} y el copiloto ${this._copiloto.nombre}`;
+      }
+    }
+
+    // Prueba del código
+    const piloto1 = new Piloto("Hans Solo");
+    const piloto2 = new Piloto("Murdock");
+    const avioneta = new Aeroplano("Airbus C295", piloto1, piloto2);
+    console.log(avioneta.volar()); // Debería mostrar el texto "Volando Airbus C295 con Hans Solo como piloto y Murdock como copiloto"
+  </script>
+</head>
+
+<body>
+  <h1>Ejercicios de pilotos y aviones</h1>
+  <h2>Pulsa F12 para ver la consola de depuración</h2>
+</body>
+
+</html>

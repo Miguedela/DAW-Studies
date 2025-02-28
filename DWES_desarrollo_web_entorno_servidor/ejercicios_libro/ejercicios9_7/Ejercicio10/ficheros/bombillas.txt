@@ -1,0 +1,4 @@
+Salon-10
+Cocina-25
+Banio-15
+Pisina-100

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj Analógico</title>
+    <style>
+        canvas {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+
+    <script type="text/javascript">
+        class AgujaSecundero {
+            constructor(radio) {
+                this._sg = 0;
+                this._radio = radio;
+            }
+
+            get sg() {
+                return this._sg;
+            }
+
+            set sg(valor) {
+                if (valor >= 0 && valor <= 59) this._sg = valor;
+                else throw new Error("El valor debe estar en el rango 0-59");
+            }
+
+            get radio() {
+                return this._radio;
+            }
+
+            set radio(valor) {
+                this._radio = valor;
+            }
+
+            // Devuelve el ángulo de la aguja en grados
+            get angulo() {
+                return 90 - this._sg * 360 / 60;
+            }
+
+            get coordenadasCartesianas() {
+                return {
+                    x: this._radio * Math.cos(grad2rad(this.angulo)),
+                    y: this._radio * Math.sin(grad2rad(this.angulo)),
+                }
+            }
+        }
+
+        class AgujaMinutero {
+            constructor(radio) {
+                this._min = 0;
+                this._radio = radio;
+            }
+
+            get min() {
+                return this._min;
+            }
+
+            set min(valor) {
+                if (valor >= 0 && valor <= 59) this._min = valor;
+                else throw new Error("El valor debe estar en el rango 0-59");
+            }
+
+            get radio() {
+                return this._radio;
+            }
+
+            set radio(valor) {
+                this._radio = valor;
+            }
+
+            // Devuelve el ángulo de la aguja en grados
+            get angulo() {
+                return 90 - this._min * 360 / 60;
+            }
+
+            get coordenadasCartesianas() {
+                return {
+                    x: this._radio * Math.cos(grad2rad(this.angulo)),
+                    y: this._radio * Math.sin(grad2rad(this.angulo)),
+                }
+            }
+        }
+
+        class AgujaHora {
+            constructor(radio) {
+                this._hr = 0;
+                this._min = 0;
+                this._radio = radio;
+            }
+
+            get hr() {
+                return this._hr;
+            }
+
+            set hr(valor) {
+                if (valor >= 0 && valor <= 11) this._hr = valor;
+                else throw new Error("El valor debe estar en el rango 0-11");
+            }
+
+            get min() {
+                return this._min;
+            }
+
+            set min(valor) {
+                if (valor >= 0 && valor <= 59) this._min = valor;
+                else throw new Error("El valor debe estar en el rango 0-59");
+            }
+
+            get radio() {
+                return this._radio;
+            }
+
+            set radio(valor) {
+                this._radio = valor;
+            }
+
+            // Devuelve el ángulo de la aguja en grados
+            get angulo() {
+                return 90 - (this._hr * 30 + this._min * 0.5);
+            }
+
+            get coordenadasCartesianas() {
+                return {
+                    x: this._radio * Math.cos(grad2rad(this.angulo)),
+                    y: this._radio * Math.sin(grad2rad(this.angulo)),
+                }
+            }
+        }
+
+        let secundero = new AgujaSecundero(70);
+        let minutero = new AgujaMinutero(65);
+        let horaAguja = new AgujaHora(50);
+        let hora;
+
+        addEventListener('load', iniciar);
+
+        function iniciar() {
+            setInterval(dibujar, 1000);
+        }
+
+        function grad2rad(grados) {
+            return grados / 180 * Math.PI;
+        }
+
+        function dibujar() {
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+
+            hora = new Date();
+            secundero.sg = hora.getSeconds();
+            minutero.min = hora.getMinutes();
+            horaAguja.hr = hora.getHours() % 12;
+
+            // Reseteamos las transformaciones previas (translate, scale, rotate, etc.)
+            ctx.resetTransform();
+
+            // Limpiamos el canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Trasladamos el origen de coordenadas al centro horizontal y vertical del canvas
+            ctx.translate(100, 100);
+            // Invertimos el sentido del eje vertical para que la referencias sean similares a las usadas en matemáticas:
+            // X crece hacia la derecha. Y crece hacia arriba
+            ctx.scale(1, -1);
+
+            //ctx.rotate(angulo * Math.PI / 180)
+
+            // Cara
+            ctx.beginPath();
+            ctx.arc(0, -1, 80, 0, Math.PI * 2, true); // Círculo exterior
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.stroke();
+
+            // Dibujamos la aguja de los segundos
+            ctx.beginPath();
+            ctx.strokeStyle = 'blue';
+            // Dibujamos una línea desde el origen de coordenadas (0,0) a la conversión a cartesinas de la aguja de los segundos
+            ctx.moveTo(0, 0);
+            ctx.lineTo(secundero.coordenadasCartesianas.x, secundero.coordenadasCartesianas.y);
+            ctx.stroke();
+
+            // Dibujamos los sg en formato digital en las coordenadas (0,90)
+            ctx.save(); // Almacenamos el estado actual del origen de coordenadas
+            ctx.translate(0, 85); // Trasladamos el origen de coordendas a la posición donde queremos dibujar el texto (90 píxeles hacia arriba)
+            ctx.scale(1, -1); // Tenemos que volver a invertir el origen de coordenadas para que el texto no salga invertido
+            ctx.font = '15px serif';
+            ctx.textAlign = 'center';
+            ctx.fillText(`${hora.getHours().toString()} : ${hora.getMinutes().toString().toString()} : ${hora.getSeconds().toString()}`, 0, 0); // Dibujamos el texto en la posición 0,0 tras la operación translate
+            ctx.restore(); // Restauramos la operaciones previas para que el origen de coordenadas vuelva a estar en el centro del cavnvas
+
+            // Dibujar la aguja del minutero
+            ctx.beginPath();
+            ctx.strokeStyle = 'red';
+            ctx.moveTo(0, 0);
+            ctx.lineTo(minutero.coordenadasCartesianas.x, minutero.coordenadasCartesianas.y);
+            ctx.stroke();
+
+            // Dibujar la aguja del minutero
+            ctx.beginPath();
+            ctx.strokeStyle = 'red';
+            ctx.moveTo(0, 0);
+            ctx.lineTo(minutero.coordenadasCartesianas.x, minutero.coordenadasCartesianas.y);
+            ctx.stroke();
+
+            // Dibujar la aguja de la hora
+            ctx.beginPath();
+            ctx.strokeStyle = 'green';
+            ctx.moveTo(0, 0);
+            ctx.lineTo(horaAguja.coordenadasCartesianas.x, horaAguja.coordenadasCartesianas.y);
+            ctx.stroke();
+        }
+    </script>
+</body>
+
+</html>
