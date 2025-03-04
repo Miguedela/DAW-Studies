@@ -11844,6 +11844,10 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.logo {
+  width: 10rem;
+}
+
 .header {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -11853,6 +11857,16 @@ textarea.form-control-lg {
     padding-top: 10rem;
     padding-bottom: 10rem;
   }
+}
+
+.eventos .card:hover {
+  cursor: pointer;
+}
+.eventos .card .img {
+  border-radius: 0.5rem;
+}
+.eventos .card .fecha {
+  color: #877457;
 }
 
 /*# sourceMappingURL=styles.css.map */
