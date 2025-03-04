@@ -1,0 +1,13 @@
+// Reescribimos variables de Bootstrap
+$rojo: #f34f51;
+$turquoise: #0098ae;
+$oscuro: #212121;
+$gris: #b5b5b5;
+
+// Asignar paleta de colores a BS5
+$primary: $rojo;
+$secondary: $turquoise;
+$dark: $oscuro;
+
+// Imoprtar Bootstrap de nomde_modules
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
