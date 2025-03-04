@@ -10,7 +10,7 @@
 
     &__grid {
         @include m.tablet {
-            @include m.crear-grid(5, v.$separation);
+            @include m.crear-grid(5, 2rem);
         }
     }
 }
