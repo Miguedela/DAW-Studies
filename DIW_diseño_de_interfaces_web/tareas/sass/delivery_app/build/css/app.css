@@ -89,6 +89,7 @@ img {
   }
 }
 .navigation__link {
+  font-size: 2rem;
   background-color: #ffffff;
   color: #000000;
   border: 0;
@@ -99,7 +100,6 @@ img {
   text-align: center;
   width: 100%;
   transition: all 0.7s;
-  font-size: 2rem;
 }
 .navigation__link:hover {
   background-color: rgb(216.75, 216.75, 216.75);
@@ -128,6 +128,109 @@ img {
   .navigation__link--register {
     width: auto;
   }
+}
+
+@media screen and (min-width: 768px) {
+  .form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.form__content {
+  background-color: #e8505b;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.form__heading {
+  color: #ffffff;
+  text-align: center;
+}
+.form__label {
+  color: #ffffff;
+  display: block;
+  margin: 1rem 0;
+  text-transform: uppercase;
+}
+.form__input {
+  border: none;
+  padding: 1.5rem;
+  width: 100%;
+}
+.form__submit {
+  margin-top: 2rem;
+  background-color: #455a64;
+  color: #ffffff;
+  border: 0;
+  border-radius: 1rem;
+  display: block;
+  font-weight: 700;
+  padding: 1.2rem 3rem;
+  text-align: center;
+  width: 100%;
+  transition: all 0.7s;
+}
+.form__submit:hover {
+  background-color: rgb(37.7662721893, 49.2603550296, 54.7337278107);
+}
+@media screen and (min-width: 768px) {
+  .form__submit {
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form__submit {
+    width: 100%;
+  }
+}
+.form__image-container {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .form__image-container {
+    margin-top: 0;
+  }
+}
+.form__imagen {
+  width: 30rem;
+}
+@media screen and (min-width: 1024px) {
+  .form__imagen {
+    width: 100%;
+  }
+}
+
+.steps {
+  margin-top: 5rem;
+}
+.steps__content {
+  background-color: #e8505b;
+}
+.steps__heading {
+  color: #ffffff;
+  text-align: center;
+}
+.steps__heading--description {
+  display: block;
+  font-size: 1.8rem;
+}
+@media screen and (min-width: 768px) {
+  .steps__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+  }
+}
+.steps__image {
+  transition: transform 0.3s;
+}
+.steps__image:hover {
+  transform: rotate(-5deg) scale(1.1);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=app.css.map */

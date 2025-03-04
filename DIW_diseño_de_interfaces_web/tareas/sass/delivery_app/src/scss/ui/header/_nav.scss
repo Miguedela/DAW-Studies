@@ -15,10 +15,9 @@
     }
 
     &__link {
-        @include m.btn(v.$black, v.$white);
-
         font-size: 2rem;
-
+        
+        @include m.btn(v.$black, v.$white);
         &--register {
             @include m.btn(v.$white, v.$main-color);
         }

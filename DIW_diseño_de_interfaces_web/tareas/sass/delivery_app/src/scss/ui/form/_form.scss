@@ -1,0 +1,64 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.form {
+    &__grid {
+        @include m.tablet {
+            @include m.crear-grid(2, v.$separation);
+        }
+    }
+
+    &__content {
+        background-color: v.$main-color;
+        padding: v.$separation;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__heading {
+        color: v.$white;
+        text-align: center;
+    }
+
+    &__label {
+        color: v.$white;
+        display: block;
+        margin: 1rem 0;
+        text-transform: uppercase;
+    }
+
+    &__input {
+        border: none;
+        padding: 1.5rem;
+        width: 100%;
+    }
+
+    &__submit {
+        margin-top: 2rem;
+        @include m.btn( v.$white, v.$secondary-color);
+
+        @include m.tablet {
+            width: 100%;
+        }
+    }
+
+    &__image-container {
+        margin-top: v.$separation;
+        display: flex;
+        justify-content: center;
+
+        @include m.dektop {
+            margin-top: 0;
+        }
+    }
+
+    &__imagen {
+        width: 30rem;
+
+        @include m.dektop {
+            width: 100%;
+        }
+    }
+
+}
