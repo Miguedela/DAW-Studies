@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 // Reescribimos variables de Bootstrap
 $rojo: #f34f51;
 $turquoise: #0098ae;
@@ -8,6 +10,17 @@ $gris: #b5b5b5;
 $primary: $rojo;
 $secondary: $turquoise;
 $dark: $oscuro;
+
+// Cards
+$card-border-color: transparent;
+
+// Tipografias
+$display1-font-weight: 900;
+$heading-font-weight: 700;
+
+// nav list
+$nav-link-color: $gris;
+$nav-link-hover-color: color.scale($gris, $lightness: 40%);
 
 // Imoprtar Bootstrap de nomde_modules
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
