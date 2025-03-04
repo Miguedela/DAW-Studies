@@ -11844,5 +11844,15 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.header {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .header {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
