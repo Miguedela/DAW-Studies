@@ -4,7 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compilar": "sass --watch src/scss:build/css"
+    "compilar": "sass --watch src/scss:build/css",
+    "purge": "purgecss --css build/css/styles.css --content index.html --output build/css"
   },
   "author": "Migue",
   "license": "ISC",
