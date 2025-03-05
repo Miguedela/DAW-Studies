@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'prueba_routing';
+
+  getTitleMayuscula() {
+    return this.title.toUpperCase();
+  }
 }

@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { ListadoProductosComponent } from './listado-productos/listado-productos.component';
 import { ListadoClientesComponent } from './listado-clientes/listado-clientes.component';
 import { Pagina404Component } from './pagina404/pagina404.component';
+import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,12 @@ import { Pagina404Component } from './pagina404/pagina404.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // HttpClientModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
