@@ -12,7 +12,7 @@ if (isset($_REQUEST['repararIncidencia'])) {
 } else if (isset($_REQUEST['soltarIncidencia'])) {
     $incidencia = Incidencia::getIncidenciaById($_REQUEST['soltarIncidencia']);
     $incidencia->setEstado('PENDIENTE');
-    $incidencia->setAdmin(null);
+    $incidencia->setAdmin("-1");
     $incidencia->update();
 }
 
