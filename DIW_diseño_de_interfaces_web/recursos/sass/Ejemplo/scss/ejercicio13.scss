@@ -1,0 +1,45 @@
+// Crea en Sass, mediante anidación, las siguientes clases siguiendo la metodología BEM con los estilos que quieras: .card, .card--grid, .card__title, .card__button, .card__button--tomato.
+
+$main-color: cornflowerblue;
+$secondary-color:crimson;
+
+//BEM
+
+//BLOQUE CARD
+.card{
+    border: 2px solid black;
+    color: $main-color;
+
+    &--grid{
+        display: grid;
+        grid-template-columns: auto;
+        //etc...
+    }
+
+    &__title{
+        text-align: center;
+        font-size: 2rem;
+        //etc...
+    }
+
+    &__button{
+        border: 1px solid black;
+        padding: 2rem;
+        //etc...
+
+        &--tomato{
+            @extend .card__button;
+            color: tomato;
+        }
+        &--aqua{
+            @extend .card__button;
+            color: aqua;
+        }
+
+
+    }
+
+
+
+
+}

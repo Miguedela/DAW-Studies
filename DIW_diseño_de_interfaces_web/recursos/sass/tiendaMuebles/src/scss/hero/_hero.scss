@@ -1,0 +1,14 @@
+@use '../base/vars' as v;
+@use '../base/vars' as m;
+
+.hero{
+    &__figure{
+        background-image: url("../img/principal.jpg");
+        background-position: center;
+        background-repeat:none ;
+        background-size: cover;
+        height: 40rem;
+        width: 100%;
+        margin: 0;
+    }
+}

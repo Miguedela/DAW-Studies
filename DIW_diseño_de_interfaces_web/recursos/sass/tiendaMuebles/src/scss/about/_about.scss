@@ -1,0 +1,28 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.about{
+    &__text{
+        padding: 4rem;
+        background-color: v.$azul;
+        color: v.$white;
+        p{
+            color: v.$white;
+        }
+    }
+
+    @include m.tablet{
+        &__grid{
+            @include m.crear-grid(2,0);
+        }
+        &__img img{
+            height: 100%;
+            object-fit:cover;
+        }
+        &__text{            
+            justify-content: start;
+            align-content: center;
+        }
+        
+    }
+}

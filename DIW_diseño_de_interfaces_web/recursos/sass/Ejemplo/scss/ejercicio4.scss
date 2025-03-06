@@ -1,0 +1,44 @@
+@use 'sass:map';
+@use 'sass:list';
+
+// Variables
+
+$colors:(red,blue,green);
+$font-sizes:("sm":1rem,"m":2rem,"lg":3rem);
+
+
+ul{
+    li{
+        color: list.nth($colors,1);
+        font-size: map.get($font-sizes,"lg");
+        ul{
+            li{
+                color: list.nth($colors,3);
+                font-size: map.get($font-sizes,"m");
+            }
+            ul{
+                li{
+                    color: list.nth($colors,2);
+                    font-size: map.get($font-sizes,"sm");
+                }
+            }
+        }
+    }
+    ul{
+        li{
+            color: list.nth($colors,3);
+            font-size: map.get($font-sizes,"m");
+        }
+        ul{
+            li{
+                color: list.nth($colors,2);
+                font-size: map.get($font-sizes,"sm");
+            }
+        }
+    }
+}
+
+
+
+
+

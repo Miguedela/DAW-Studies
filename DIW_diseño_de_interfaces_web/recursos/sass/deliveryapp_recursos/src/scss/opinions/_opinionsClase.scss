@@ -1,0 +1,17 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.opinions{
+    padding: v.$separation 0;
+
+    &__heading{
+        text-align: center;
+    }
+
+    &__grid{
+        @include m.tablet{
+            @include m.crear-grid(5,2rem)
+            
+        }
+    }
+}

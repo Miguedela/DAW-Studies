@@ -1,0 +1,102 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.favorites{
+    background-color: v.$grey;
+    margin-bottom: v.$separation;
+    padding-bottom:v.$separation ;
+    &__grid{
+        @include m.crear-grid(1,20px);
+    }
+
+    &__heading{
+        padding-top: v.$separation;
+        text-align: center;
+        color: v.$secondary-color;
+    }
+
+    @include m.tablet{
+        &__grid{
+            @include m.crear-grid(2,30px);
+        }
+    }
+    @include m.desktop{
+        &__grid{
+            @include m.crear-grid(2,30px);
+        }
+    }
+
+
+}
+
+.favorite{
+    &__grid{
+        @include m.crear-grid(1);
+        grid-template-rows: repeat(3,1fr);
+        background-color: v.$white;
+        border-radius:10px;
+        padding: 50px;
+        box-shadow: 4px 4px 10px grey;
+    }
+
+    &__image{
+        justify-items:center;
+        align-items:center;
+        grid-row: 1/2;
+        & img{ width: 200px;}
+        
+    }
+    &__content{
+        justify-items:center;
+        align-items:center;
+        grid-row: 2/4;
+        
+    }
+    &__description{
+        text-align: center;
+        color: v.$secondary-color;
+    }
+    &__name{
+        color: v.$main-color;
+    }
+
+    @include m.tablet{
+        &__grid{
+            @include m.crear-grid(2,30px);
+            
+        }
+        &__image{
+            grid-column: 1/2;
+            grid-row: 1/4;
+            align-content: center;
+        }
+        
+        &__content{
+            grid-column: 2/3;
+            grid-row: 1/4;
+            text-align: start;
+        }
+        &__description{
+            text-align: start;
+        }
+
+    }
+    @include m.desktop{
+        &__grid{
+            @include m.crear-grid(3,30px);
+            
+        }
+        &__image{
+            grid-column: 1/2;
+            grid-row: 1/4;
+            // align-content: center;
+        }
+        
+        &__content{
+            grid-column: 2/4;
+            grid-row: 1/4;
+            justify-items: start;
+        }
+    }
+}
+

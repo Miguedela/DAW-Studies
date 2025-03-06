@@ -1,0 +1,19 @@
+// @use 'variables-ejer2';
+//Alias
+@use 'variables-ejer2' as v with (
+    $h1_color:tomato,
+    $body_color:aqua
+);
+
+
+body{
+    // background-color: variables-ejer2.$body_color;
+    // font-size: variables-ejer2.$font_body_size;
+    background-color: v.$body_color;
+    font-size: v.$font_body_size;
+
+}
+h1{
+    color: v.$h1_color;
+    font-size: v.$h1_size;
+}

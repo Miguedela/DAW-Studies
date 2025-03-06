@@ -1,0 +1,22 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.categories{
+    &__heading{
+        text-align: center;
+    }
+    &__category img{
+        width: 100%;
+    }
+    &__category p{
+        text-align: center;
+        
+    }
+
+    @include m.tablet{
+        &__grid{
+            @include m.crear-grid(3);
+        }
+    }
+
+}

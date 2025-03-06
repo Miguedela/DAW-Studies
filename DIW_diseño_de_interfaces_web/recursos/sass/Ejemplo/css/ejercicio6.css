@@ -1,0 +1,13 @@
+.container, .contenedor-con-altura {
+  width: 300px;
+  background-color: aqua;
+  border: solid 1px black;
+}
+
+.contenedor-con-altura {
+  height: 300px;
+  background-color: yellow;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=ejercicio6.css.map */

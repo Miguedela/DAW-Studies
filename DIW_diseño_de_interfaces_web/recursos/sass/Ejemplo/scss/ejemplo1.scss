@@ -1,0 +1,27 @@
+//Variables Sass
+//Estos comentarios no aparecen cuando se compila
+$color1:#caca00;
+$color2: #fe0fea;
+$font1:sans-serif;
+$font2:Verdana;
+
+body{
+    font-family: $font1;
+}
+h1{
+    color: $color1;
+    font-family: $font2;
+}
+
+p{
+    color:$color2
+}
+
+/*Comentarios que aparecen al compilar*/
+main{
+    div{
+        p{
+            background-color: #caca00;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+//Variables
+$ancho: 500px;
+$alto:300px;
+
+.container{
+    width: $alto;
+    background-color: aqua;
+    border: solid 1px black;
+}
+
+.contenedor-con-altura{
+    @extend .container;
+    height: $alto;
+    background-color: yellow;
+    margin-top: 10px;
+}

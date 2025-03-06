@@ -1,0 +1,12 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.header{
+    &__title{
+        text-align: center;
+    }
+    span{
+        color: v.$azul;
+    }
+
+}

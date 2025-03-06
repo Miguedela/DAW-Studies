@@ -1,0 +1,19 @@
+//Crea un bucle con Sass para generar 10 clases, 
+//donde cada una aplicará un color de fondo en hexadecimal dentro de una misma escala. 
+//Por ejemplo:  .color1 -> #000000, .color2 -> #100000, .color3 -> #200000, ..., .color10 -> #900000.
+@use 'sass:string';
+
+@for $i from 0 through 9 {
+    .color#{$i+1}{
+        // color: '#' + #{$i} + '00000';
+        background-color:string.unquote('#' + #{$i} + '00000');
+        color:string.unquote('#' + #{$i} + '99999');
+        text-align: center;
+        height: 25px;
+    }
+}
+
+
+
+
+

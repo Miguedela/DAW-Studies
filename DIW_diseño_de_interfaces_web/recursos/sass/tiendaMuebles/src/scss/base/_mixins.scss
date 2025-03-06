@@ -1,0 +1,66 @@
+@use 'vars' as v;
+@use 'sass:color';
+
+//MIXINS
+//Mixin box-sizing
+@mixin box-sizing($border-model){
+    box-sizing: $border-model;
+}
+
+//Mixin grid
+@mixin crear-grid($num-colums, $gap:10px){
+    display: grid;
+    grid-template-columns: repeat($num-colums,1fr);
+    gap: $gap;
+}
+
+//Mixin btn
+@mixin btn($bgcolor,$fgcolor){
+    background-color: $bgcolor;
+    border: 0;
+    border-radius: 1rem;
+    color: $fgcolor;
+    font-weight: 700;
+    display: block;
+    padding: 1.2rem 3rem;
+    text-align: center;
+    width: 100%;
+
+    transition: background-color 0.4s;
+
+    &:hover{
+        background-color: color.adjust($bgcolor,$lightness:-15%);
+    }
+
+    @include tablet {
+        width: auto;
+    }
+}
+
+// @mixin cargar-img($url){
+//     background-image: url($url);
+//     background-position: center;
+//     background-repeat:none ;
+//     background-size: cover;
+
+//     height: 25rem;
+//     width: 100%;
+// }
+
+//Media queries
+@mixin mobile (){
+    @media screen and (min-width: v.$small) {
+        @content;
+    }
+}
+@mixin tablet (){
+    @media screen and (min-width: v.$medium) {
+        @content;
+    }
+}
+@mixin desktop (){
+    @media screen and (min-width: v.$big) {
+        @content;
+    }
+}
+

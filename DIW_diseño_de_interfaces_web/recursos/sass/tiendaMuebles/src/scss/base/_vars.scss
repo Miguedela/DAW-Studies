@@ -1,0 +1,25 @@
+//Variables
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-Regular.ttf);
+    font-family: "Play";
+    src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+//Fuentes
+$main-font: 'Raleway', sans-serif;
+$sec-font: 'Play', sans-serif;
+
+//COlores
+$azul: #037bc0;
+$verde: #8cbc00;
+$black:#000000;
+$grey: #eceeef;
+$white:#ffffff;
+
+//Separacion
+$separation: 5rem;
+
+//Media queries
+$small:480px;
+$medium:768px;
+$big:1024px;

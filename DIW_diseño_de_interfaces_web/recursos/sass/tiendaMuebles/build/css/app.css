@@ -1,0 +1,266 @@
+@font-face {
+  font-family: "Raleway";
+  src: url(../fonts/Raleway-Regular.ttf);
+  font-family: "Play";
+  src: url(../fonts/PlayfairDisplay-Regular.ttf);
+}
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+p {
+  color: #000000;
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3.8rem;
+  font-family: "Play", sans-serif;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-family: "Play", sans-serif;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-family: "Play", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  margin: 0 auto; /*Centrado*/
+  max-width: 1200px; /*120rem*/
+  width: 100%;
+}
+
+.header__title {
+  text-align: center;
+}
+.header span {
+  color: #037bc0;
+}
+
+.navigation {
+  border-top: 1px solid #eceeef;
+  margin-bottom: 2rem;
+}
+.navigation .container {
+  margin-top: 2rem;
+}
+.navigation .container .navigation__link {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .navigation .container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.hero__figure {
+  background-image: url("../img/principal.jpg");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  height: 40rem;
+  width: 100%;
+  margin: 0;
+}
+
+.categories__heading {
+  text-align: center;
+}
+.categories__category img {
+  width: 100%;
+}
+.categories__category p {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .categories__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+.about__text {
+  padding: 4rem;
+  background-color: #037bc0;
+  color: #ffffff;
+}
+.about__text p {
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .about__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .about__img img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .about__text {
+    justify-content: start;
+    align-content: center;
+  }
+}
+
+.main {
+  margin-bottom: 3rem;
+}
+.main__title {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .main__products {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+  }
+  .main__products .main__product--1 {
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+  .main__products .main__product--1 .main__figure {
+    grid-column: 1/4;
+  }
+  .main__products .main__product--1 .main__figure img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .main__products .main__product--2 {
+    grid-column: 1/4;
+  }
+  .main__products .main__product--3 {
+    grid-column: 4/7;
+  }
+  .main__products .main__product--4 {
+    grid-column: 1/3;
+  }
+  .main__products .main__product--5 {
+    grid-column: 3/5;
+  }
+  .main__products .main__product--6 {
+    grid-column: 5/7;
+  }
+  .main__products .main__btn {
+    width: 100%;
+  }
+}
+.main__product {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+  margin-bottom: 1rem;
+}
+.main__img {
+  width: 100%;
+}
+.main__text {
+  background-color: #037bc0;
+  color: #ffffff;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main__text p {
+  color: #ffffff;
+}
+.main__price {
+  font-weight: 800;
+}
+.main__btn {
+  background-color: #8cbc00;
+  border: 0;
+  border-radius: 1rem;
+  color: #ffffff;
+  font-weight: 700;
+  display: block;
+  padding: 1.2rem 3rem;
+  text-align: center;
+  width: 100%;
+  transition: background-color 0.4s;
+}
+.main__btn:hover {
+  background-color: rgb(83.0319148936, 111.5, 0);
+}
+@media screen and (min-width: 768px) {
+  .main__btn {
+    width: auto;
+  }
+}
+
+.footer {
+  border-top: 1px solid #eceeef;
+}
+.footer__grid {
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .footer__grid .footer__links {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+  }
+}
+.footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer__links a {
+  color: #000000;
+}
+.footer__rights {
+  text-align: center;
+}
+
+/*# sourceMappingURL=app.css.map */

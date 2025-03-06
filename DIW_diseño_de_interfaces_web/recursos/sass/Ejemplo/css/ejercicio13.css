@@ -1,0 +1,24 @@
+.card {
+  border: 2px solid black;
+  color: cornflowerblue;
+}
+.card--grid {
+  display: grid;
+  grid-template-columns: auto;
+}
+.card__title {
+  text-align: center;
+  font-size: 2rem;
+}
+.card__button, .card__button--aqua, .card__button--tomato {
+  border: 1px solid black;
+  padding: 2rem;
+}
+.card__button--tomato {
+  color: tomato;
+}
+.card__button--aqua {
+  color: aqua;
+}
+
+/*# sourceMappingURL=ejercicio13.css.map */

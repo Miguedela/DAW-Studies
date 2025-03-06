@@ -1,0 +1,15 @@
+// Mediante un bucle while, crea 5 clases que definan la anchura de una columna con diferentes porcentajes de la forma: 
+// 100/2%, 100/4%, 100/6%, ..., Los nombres de las clases seguirán el patrón: .ancho-col-1, .ancho-col-2, .ancho-col-3, ... 
+
+@use "sass:string";
+
+$i: 1;
+
+@while $i<=5 {
+    .ancho-col-#{$i}{
+        width: calc(100/($i*2))+string.unquote(('%'));
+        background-color: aqua;
+    }
+
+    $i:$i+1;
+}

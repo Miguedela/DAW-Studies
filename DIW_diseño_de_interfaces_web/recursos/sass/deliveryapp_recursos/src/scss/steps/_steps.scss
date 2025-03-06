@@ -1,0 +1,39 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.steps{
+    margin-bottom: 0;
+    color: v.$white;
+    &__content{
+        background-color: v.$main-color;
+    }
+
+    &__content h2{
+        margin: 0;
+    }
+
+    &__grid{
+        @include m.tablet{
+            @include m.crear-grid(3,50px);
+        }
+    }
+
+    &__heading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__heading--description{
+        font-size: 2rem;
+    }
+
+    &__image{
+        transition: transform 0.3s;
+        &:hover{
+            transform: rotate(-5deg) scale(1.1);
+            cursor: pointer;
+        }
+    }
+}

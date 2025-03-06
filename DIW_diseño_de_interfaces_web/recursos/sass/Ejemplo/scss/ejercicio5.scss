@@ -1,0 +1,43 @@
+@use 'sass:list';
+
+//Variables
+// $h1_color:blue;
+// $h2_color:green;
+// $h4_color: red;
+// $enlace_color:orange;
+
+$color_list:(limegreen,tomato, lightgrey, navy);
+
+header{
+    h1{
+        color:list.nth($color_list,4);
+    }
+}
+main{
+    h2{
+        color:list.nth($color_list,1);
+    }
+}
+footer{
+    h4{
+        color:list.nth($color_list,3);
+        a{
+            color:list.nth($color_list,2);
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    }
+    div{
+        ul{
+            li{
+                a{
+                    color:list.nth($color_list,2);
+                }
+                a:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

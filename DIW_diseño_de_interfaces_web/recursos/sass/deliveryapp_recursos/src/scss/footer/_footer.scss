@@ -1,0 +1,51 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.footer{
+    color: v.$white;
+    background-color: v.$secondary-color;
+    padding-top: 2rem;
+
+
+    &__heading{
+        color: v.$white;
+        text-align: center;
+    }
+    &__text{
+        color: v.$white;
+        text-align: center;
+        line-height: 1.5;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    &__link{
+        color: v.$white;
+        display: block;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    &__copyright{
+        background-color: v.$main-color;
+        color: v.$white;
+        padding:2rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    @include m.tablet{
+        &__grid{
+            @include m.crear-grid(3,2rem);
+        }
+        &__heading{
+            text-align: start;
+        }
+        &__text{
+            text-align: left;
+            padding: 0;
+        }
+        &__link{
+            text-align: start;
+        }
+    }
+}

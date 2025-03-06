@@ -1,0 +1,32 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.delivery{
+    margin-bottom: v.$separation;
+    &__heading{
+        text-align: center;
+        color: v.$secondary-color;
+    }
+    &__text{
+        color: v.$secondary-color;
+        line-height: 1.4;
+    }
+    &__link{
+        @include m.btn(v.$main-color,v.$white);
+    }
+    
+    @include m.tablet{
+        &__grid{
+            @include m.crear-grid(2,40px);
+        }
+        &__link{
+            width: 60%;
+        }
+    }
+    @include m.desktop{
+        
+        &__link{
+            width:40%;
+        }
+    }
+}

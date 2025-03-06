@@ -1,0 +1,25 @@
+header h1 {
+  color: navy;
+}
+
+main h2 {
+  color: limegreen;
+}
+
+footer h4 {
+  color: lightgrey;
+}
+footer h4 a {
+  color: tomato;
+}
+footer h4 a:hover {
+  text-decoration: none;
+}
+footer div ul li a {
+  color: tomato;
+}
+footer div ul li a:hover {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=ejercicio5.css.map */
