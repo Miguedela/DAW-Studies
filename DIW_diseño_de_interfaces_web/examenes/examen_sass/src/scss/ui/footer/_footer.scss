@@ -1,0 +1,33 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.footer {
+    background-color: v.$gris;
+    border-bottom: 3px solid v.$principal;
+
+
+}
+
+.footerr {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    p {
+        text-align: center;
+    }
+
+    @include m.tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__navigation {
+        @include m.tablet {
+
+            min-width: 400px;
+        }
+
+        min-width: 500px;
+    }
+}

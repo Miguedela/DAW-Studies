@@ -1,0 +1,94 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.main {
+    margin: 5rem auto;
+    background-color: v.$gris;
+
+    &__heading {
+        margin: 5rem auto;
+        color: v.$blanco;
+        text-align: center;
+    }
+
+
+    &__clases {
+        width: 100%;
+
+        @include m.crear-grid(1);
+
+        @include m.tablet {
+            @include m.crear-grid(2);
+        }
+
+        @include m.desktop {
+            @include m.crear-grid(3);
+        }
+
+        &__clase {
+            background-color: v.$blanco;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            &__figure {
+                width: 100%;
+
+                &__img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    margin-bottom: 0;
+                }
+
+                &__date {
+                    width: 100%;
+                    background-color: v.$principal;
+                    padding: 1rem 0;
+                    margin-top: 0;
+
+                    &__text {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+
+                    h3 {
+                        font-weight: 400;
+                        color: v.$blanco;
+                    }
+
+                    h3:nth-child(2) {
+                        color: v.$negro;
+                        background-color: v.$secundario;
+                        padding: 0.5rem 1rem;
+                        border-radius: 1rem;
+                    }
+                }
+            }
+
+            &__text {
+                * {
+                    padding: 0.7rem 0;
+                }
+
+                &__subtitle {
+                    color: v.$principal;
+                }
+            }
+
+            &__btn {
+                display: block;
+                width: 95%;
+                background-color: v.$principal;
+                margin: 1rem auto;
+                padding: 1rem;
+                text-align: center;
+                color: v.$blanco;
+                font-weight: 400;
+            }
+        }
+    }
+}

@@ -1,0 +1,345 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #000000;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 4.4rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.4rem;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 95%;
+}
+
+.header {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.header__logo {
+  margin: 0 auto;
+  height: 80px;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin: 0;
+    max-width: 40%;
+  }
+}
+.header__logo img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.navigation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    min-width: 300px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.navigation__link {
+  font-size: 1.6rem;
+  padding: 0.7rem 0;
+}
+
+.hero {
+  width: 100%;
+}
+.hero__experiencia, .hero__nosotros {
+  height: 80rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .hero__experiencia, .hero__nosotros {
+    flex-direction: row;
+    height: 40rem;
+  }
+}
+.hero__experiencia__info, .hero__nosotros__info {
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f46669;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .hero__experiencia__info, .hero__nosotros__info {
+    height: 100%;
+    width: 50%;
+  }
+}
+.hero__experiencia__info__titulo, .hero__nosotros__info__titulo {
+  width: 80%;
+  padding: 2rem;
+  padding-top: 3rem;
+  border-top: 1px solid #f5f5f5;
+  color: #ffffff;
+  font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+  .hero__experiencia__info__titulo, .hero__nosotros__info__titulo {
+    width: 50%;
+  }
+}
+.hero__experiencia__info__texto, .hero__nosotros__info__texto {
+  width: 80%;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #f5f5f5;
+  color: #ffffff;
+  font-weight: 300;
+}
+@media screen and (min-width: 1024px) {
+  .hero__experiencia__info__texto, .hero__nosotros__info__texto {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__experiencia__figure, .hero__nosotros__figure {
+    height: 100%;
+    width: 50%;
+  }
+}
+.hero__experiencia__figure img, .hero__nosotros__figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__nosotros__info {
+  background-color: #c7c57d;
+}
+@media screen and (min-width: 768px) {
+  .hero__nosotros {
+    flex-direction: row-reverse;
+  }
+}
+
+.steps {
+  margin: 5rem auto;
+}
+.steps__heading {
+  margin: 5rem auto;
+  color: #ffffff;
+  text-align: center;
+}
+.steps__content {
+  width: 100%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .steps__content {
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) {
+  .steps__content__step {
+    width: calc(33.3333333333% - 20px);
+    margin: 0 10px;
+  }
+}
+.steps__content__step__image {
+  transition: transform 0.3s;
+}
+.steps__content__step__image:hover {
+  transform: rotate(-5deg) scale(1.1);
+  cursor: pointer;
+}
+
+.main {
+  margin: 5rem auto;
+  background-color: #f5f5f5;
+}
+.main__heading {
+  margin: 5rem auto;
+  color: #ffffff;
+  text-align: center;
+}
+.main__clases {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .main__clases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__clases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+.main__clases__clase {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main__clases__clase__figure {
+  width: 100%;
+}
+.main__clases__clase__figure__img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+.main__clases__clase__figure__date {
+  width: 100%;
+  background-color: #f46669;
+  padding: 1rem 0;
+  margin-top: 0;
+}
+.main__clases__clase__figure__date__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__clases__clase__figure__date h3 {
+  font-weight: 400;
+  color: #ffffff;
+}
+.main__clases__clase__figure__date h3:nth-child(2) {
+  color: #000000;
+  background-color: #c7c57d;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+.main__clases__clase__text * {
+  padding: 0.7rem 0;
+}
+.main__clases__clase__text__subtitle {
+  color: #f46669;
+}
+.main__clases__clase__btn {
+  display: block;
+  width: 95%;
+  background-color: #f46669;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.chef__info {
+  width: 100%;
+  background-image: url(../../assets/img/chef_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.chef__info__text {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20rem 0;
+}
+.chef__info__text__title {
+  color: #ffffff;
+}
+.chef__info__text__subtitle {
+  color: #ffffff;
+}
+.chef__info__text__btn {
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #f5f5f5;
+  border-bottom: 3px solid #f46669;
+}
+
+.footerr {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.footerr p {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footerr {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.footerr__navigation {
+  min-width: 500px;
+}
+@media screen and (min-width: 768px) {
+  .footerr__navigation {
+    min-width: 400px;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

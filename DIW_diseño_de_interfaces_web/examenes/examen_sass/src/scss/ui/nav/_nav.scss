@@ -1,0 +1,21 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.navigation {
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+        min-width: 300px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        font-size: v.$resto;
+        padding: 0.7rem 0;
+    }
+}

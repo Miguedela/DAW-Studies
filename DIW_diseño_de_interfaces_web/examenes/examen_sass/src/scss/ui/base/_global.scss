@@ -1,0 +1,51 @@
+@use 'vars' as v;
+@use 'mixins' as m;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: v.$main-font;
+    color: v.$negro;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1 {
+    font-size: v.$h1;
+    line-height: v.$altura-titulares;
+}
+
+h2 {
+    font-size: v.$h2;
+    line-height: v.$altura-titulares;
+}
+
+h3 {
+    font-size: v.$h3;
+    line-height: v.$altura-titulares;
+}
+
+p {
+    font-size: v.$p;
+    line-height: v.$altura-parrafos;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+//Container
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 95%;
+}

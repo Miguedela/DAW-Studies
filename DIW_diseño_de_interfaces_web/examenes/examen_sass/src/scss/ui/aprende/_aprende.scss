@@ -1,0 +1,43 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.steps {
+    margin: 5rem auto;
+
+    &__heading {
+        margin: 5rem auto;
+        color: v.$blanco;
+        text-align: center;
+    }
+
+    &__content {
+        width: 100%;
+        margin: 5rem auto;
+
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        @include m.tablet {
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: space-around;
+        }
+
+        &__step {
+            @include m.tablet {
+                width: calc(100% / 3 - 20px);
+                margin: 0 10px;
+            }
+
+            &__image {
+                transition: transform 0.3s;
+
+                &:hover {
+                    transform: rotate(-5deg) scale(1.1);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

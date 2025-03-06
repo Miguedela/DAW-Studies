@@ -1,0 +1,37 @@
+@use '../base/mixins' as m;
+@use '../base/vars' as v;
+
+.chef {
+    &__info {
+        width: 100%;
+
+        background-image: url(../../assets/img/chef_bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &__text {
+            width: 50%;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 20rem 0;
+
+            &__title {
+                color: v.$blanco;
+            }
+
+            &__subtitle {
+                color: v.$blanco;
+            }
+
+            &__btn {
+                color: v.$blanco;
+            }
+        }
+    }
+}
