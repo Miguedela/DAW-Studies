@@ -1,0 +1,13 @@
+@use '../base/vars' as v;
+@use '../base/mixins' as m;
+
+.hero {
+
+
+    &__image {
+        max-height: 50rem;
+
+        width: 100%;
+        object-fit: cover;
+    }
+}

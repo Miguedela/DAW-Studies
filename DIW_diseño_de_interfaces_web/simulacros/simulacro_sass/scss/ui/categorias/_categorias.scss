@@ -1,0 +1,55 @@
+@use '../base/vars' as v;
+@use '../base/mixins' as m;
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        @include m.tablet {
+            max-width: 1200px;
+        }
+
+        & {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            padding-top: 5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet {
+            max-width: 1200px;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        &__item {
+            width: 100%;
+
+            @include m.tablet {
+                width: calc(100% / 3 - 20px);
+            }
+
+            &__name {
+                text-align: center;
+                font-size: large;
+                font-weight: 100;
+                padding: 2rem 0;
+                margin-bottom: 2rem;
+            }
+
+            &__image {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+@use '../base/vars' as v;
+
+.header {
+    &__title {
+        font-family: 'Times New Roman', Times, serif;
+
+        text-align: center;
+        padding-top: 5rem;
+
+        &--highlight {
+            color: v.$azul;
+        }
+    }
+}

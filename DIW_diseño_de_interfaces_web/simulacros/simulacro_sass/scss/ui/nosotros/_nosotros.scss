@@ -1,0 +1,51 @@
+@use '../base/vars' as v;
+@use '../base/mixins' as m;
+
+.about {
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+
+    @include m.dektop {
+        height: 40rem;
+        flex-direction: row;
+    }
+
+    &__image-container {
+        height: 50%;
+        width: 100%;
+        @include m.dektop {
+            height: 100%;
+            width: 50%;
+        }
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    &__text {
+        height: 50%;
+        width: 100%;
+        @include m.dektop {
+            height: 100%;
+            width: 50%;
+        }
+
+        background-color: v.$azul;
+        color: v.$blanco;
+        padding: 5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__description {
+            width: 50%;
+            color: v.$blanco;
+            font-size: small;
+        }
+    }
+}
