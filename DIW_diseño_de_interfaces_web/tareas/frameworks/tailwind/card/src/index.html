@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Card Tailwind</title>
     <link rel="stylesheet" href="../dist/css/styles.css">
 </head>
-
-<body class="bg-gray-200 pt-7">
-    <article class="mx-auto w-72 bg-white rounded-2xl p-4 flex flex-col">
-        <figure>
-            <img class="rounded-xl object-cover"
-                src="https://res.cloudinary.com/dascvtkd1/image/upload/v1741776381/317aa5e6-8edc-42b7-b934-abd37d0b3685.png"
-                alt="">
+<body class="bg-blue-200">
+    <article class="w-72 bg-white mx-auto rounded-2xl p-4 mt-5 flex gap-8 flex-col md:flex-row md:w-2/3 max-w-lg">
+        <figure class="md:w-1/2">
+            <img class="rounded-t-xl md:rounded-l-xl object-cover block h-full" src="https://res.cloudinary.com/dascvtkd1/image/upload/v1740935148/b2d704c8-d678-4eb5-b2fa-d1297ee0f7ef.png" alt="">
         </figure>
 
-        <h1 class="text-lg font-bold">Jhon Deere 9RX 490-640</h1>
+        <div class="flex-1">
+            <h2 class="font-bold text-2xl">Jhon Deere 2020</h2>
+            <p class="text-zinc-600 text-lg">Tractor guapo</p>
 
-        <p class="text-sm text-zinc-600">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis illum quod impedit nihil
-            veniam velit autem aliquam id fugit.</p>
+            <article class="mt-4 bg-zinc-100 rounded-sm p-3 hidden md:flex justify-evenly">
+                <div>
+                    <h3 class="text-zinc-600 font-bold">Articles</h3>
+                    <p class="text-2xl font-bold">34</p>
+                </div>
+    
+                <div>
+                    <h3 class="text-zinc-600 font-bold">Followers</h3>
+                    <p class="text-2xl font-bold">980</p>
+                </div>
+    
+                <div>
+                    <h3 class="text-zinc-600 font-bold">Rating</h3>
+                    <p class="text-2xl font-bold">9.1</p>
+                </div>
+            </article>
 
+            <div class="grid gap-4 ">
+                <a href="#" class="font-bold text-zinc-700 px-8 py-4 border-2 text-center rounded-lg border-zinc-400">Chat</a>
+                <a href="#" class="font-bold text-white px-8 py-4 border-2 border-zinc-400 text-center rounded-lg bg-blue-400">Follow</a>
+            </div>
+        </div>
     </article>
+    
+    
 </body>
-
 </html>
