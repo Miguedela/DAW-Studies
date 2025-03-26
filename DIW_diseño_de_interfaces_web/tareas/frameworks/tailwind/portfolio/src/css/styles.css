@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+/* theme base components utilities */
+@layer components {
+    .wrapper {
+        @apply w-[90%] mx-auto max-w-screenn-xl overflow-hidden;
+    }
+}
